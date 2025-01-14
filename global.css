@@ -1,1 +1,16 @@
 @import url("styles/reset.css");
+
+/*  Variables */
+:root{
+    --color-primary: #d4534a;
+    --color-primary-dark: #d4534a;
+    --color-primary-light: #f6dad8;
+    
+    --color-secondary: #ffffff;
+    
+    --color-text-title: #202020;
+    --color-text-paragraph: #252525;
+    --color-text-disabled: #999999;
+    --color-text-primary: #d1453b;
+    --color-text-highlight: #e06357;
+}

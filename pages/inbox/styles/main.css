@@ -1,0 +1,19 @@
+@import url("/styles/item.css");
+
+.item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    height: 58px;
+}
+
+.item__buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 128px;
+    height: 24px;
+}

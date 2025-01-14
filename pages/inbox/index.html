@@ -6,6 +6,8 @@
     <title>Todo List - Inbox</title>
     <link rel="stylesheet" href="/global.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/46675d0a76.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="title">
@@ -18,22 +20,34 @@
                 <div class="sections-item__container">
                     <div class="section">
                         <div class="section__title">
-                            <div class="section__name"></div>
-                            <div class="section__count"></div>
+                            <div class="section__name">Welcome</div>
+                            <div class="section__count">3</div>
                             <div class="section__ellipsis"></div>
                         </div>
                         <div class="section__list-container">
                             <ul class="section-list">
                                 <li class="item">
                                     <div class="item__move-handle"></div>
-                                    <div class="item__checklist"></div>
-                                    <div class="item__title"></div>
-                                    <div class="item__date"></div>
+                                    <div class="item__checkbox checkbox">
+                                        <i class="tick fa-solid fa-check"></i>
+                                    </div>
+                                    <div class="item__title-date">
+                                        <div class="item__title">Join existing team projects</div>
+                                        <div class="item__date">Sep 16 2024</div>
+                                    </div>
                                     <div class="item__buttons">
-                                        <div class="item__button-edit"></div>
-                                        <div class="item__button-date"></div>
-                                        <div class="item__button-comment"></div>
-                                        <div class="item__button-ellipsis"></div>
+                                        <div class="item__button-edit">
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </div>
+                                        <div class="item__button-date">
+                                            <i class="fa-regular fa-calendar-days"></i>
+                                        </div>
+                                        <div class="item__button-comment">
+                                            <i class="fa-regular fa-comment"></i>
+                                        </div>
+                                        <div class="item__button-ellipsis">
+                                            <i class="fa-solid fa-ellipsis"></i>
+                                        </div>
                                     </div>
                                 </li>
                             </ul>
