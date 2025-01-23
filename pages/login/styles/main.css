@@ -1,0 +1,57 @@
+body {
+    font-family: "lato", sans-serif;
+}
+
+.container {
+    padding: 2rem 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+}
+
+.logo p {
+    color: var(--color-primary);
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.content {
+    display: flex;
+}
+
+.content__signup {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.content__title {
+    width: 100%;
+    text-align: left;
+}
+
+.content__quick-signup {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-paragraph);
+    border: 1px solid #eee;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+}
