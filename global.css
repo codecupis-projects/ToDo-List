@@ -6,11 +6,14 @@
     --color-primary-dark: #d4534a;
     --color-primary-light: #f6dad8;
     
-    --color-secondary: #ffffff;
+    --color-secondary: rgb(228, 66, 50);
+    --color-white: #ffffff;
     
     --color-text-title: #202020;
     --color-text-paragraph: #252525;
     --color-text-disabled: #999999;
     --color-text-primary: #d1453b;
     --color-text-highlight: #e06357;
+
+    --border-radius: 0.5rem;
 }

@@ -1,3 +1,8 @@
+.content__reset-info {
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
 .content__right-side {
   flex-basis: 48%;
   display: flex;
