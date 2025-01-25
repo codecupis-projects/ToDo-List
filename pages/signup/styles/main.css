@@ -76,6 +76,15 @@ body {
   -moz-border-radius: var(--border-radius);
   -ms-border-radius: var(--border-radius);
   -o-border-radius: var(--border-radius);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.quick-signup__items:hover {
+  background-color: #eee;
 }
 
 .content__form {
@@ -119,6 +128,21 @@ body {
   -ms-transform: scaleX(-1);
   -o-transform: scaleX(-1);
   cursor: pointer;
+  padding: 0.3rem;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+}
+
+.password__icon:hover {
+  background-color: #eee;
 }
 
 .form__button {
@@ -135,6 +159,15 @@ body {
   -ms-border-radius: var(--border-radius);
   -o-border-radius: var(--border-radius);
   cursor: pointer;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.form__button:hover {
+  background-color: rgb(191, 56, 44);
 }
 
 .content__policy {
