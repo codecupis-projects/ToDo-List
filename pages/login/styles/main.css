@@ -1,0 +1,16 @@
+.content__right-side {
+  flex-basis: 48%;
+  display: flex;
+}
+
+.right-side__img {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.content__forget-password {
+  width: 100%;
+  text-align: left;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
