@@ -17,4 +17,7 @@
 
   --border-radius: 0.5rem;
   --transition: all 0.2s linear;
+
+  --page-top-bar-height: 56px;
+  --page-padding-side: 55px;
 }
