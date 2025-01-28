@@ -4,6 +4,7 @@
     background-color: transparent;
     border: 2px solid var(--color-primary-dark);
     border-radius: 50%;
+    transition: all 0.5s ease-out;
 }
 
 .checkbox:hover{
@@ -22,6 +23,7 @@
     font-size: 0.7em;
     text-align: center;
     line-height: 126%; 
+    transition: opacity 0.5s ease-out;
 }
 
 .checkbox:hover>.tick{
