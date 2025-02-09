@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="right">
+        <div class="top"></div>
+        <div class="h1">
+            <h1>Filters & Labels</h1>
+        </div>
+        <div class="all">
+            <header class="header">
+                <button onclick="btn()" id="button" class="btnL">
+                    <svg id="svg1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                        viewBox="0 0 16 16">
+                        <path fill="currentColor"
+                            d="M11.646 5.647a.5.5 0 0 1 .708.707l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 1 1 .708-.707L8 9.294l3.646-3.647Z">
+                        </path>
+                    </svg>
+                    <svg id="svg2" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="m3.914 11.086 6.5-6.5A2 2 0 0 1 11.828 4H18a2 2 0 0 1 2 2v6.172a2 2 0 0 1-.586 1.414l-6.5 6.5a2 2 0 0 1-2.828 0l-6.172-6.172a2 2 0 0 1 0-2.828Zm.707.707a1 1 0 0 0 0 1.414l6.172 6.172a1 1 0 0 0 1.414 0l6.5-6.5a1 1 0 0 0 .293-.707V6a1 1 0 0 0-1-1h-6.172a1 1 0 0 0-.707.293l-6.5 6.5ZM14.75 10.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <h2 class="h2">
+                    <div class="divh2">
+                        <span>Filters</span>
+                        <span class="span1">USED: 2/3</span>
+                    </div>
+                </h2>
+                <button class="btnL">
+                    <svg width="13" height="13">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.5.5 0 1 1 0 1H7v5.5a.5.5 0 1 1-1 0V7H.5a.5.5 0 0 1 0-1H6z">
+                        </path>
+                    </svg>
+
+                </button>
+            </header>
+            <div class="div1 b-top" id="div1">
+                <svg id="s1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M17 14a5 5 0 0 1-10 0c0-1.102.345-2 1.064-3.03.138-.198.534-.71.915-1.202.33-.427.65-.84.782-1.023.775-1.077 1.338-2.123 1.765-3.403a.5.5 0 0 1 .948 0c.427 1.28.99 2.326 1.765 3.403.131.183.451.596.782 1.023.38.493.776 1.004.915 1.202C16.656 12 17 12.898 17 14Zm-2.709-3.54c-.587-.76-.738-.957-.863-1.13A13.702 13.702 0 0 1 12 6.882c-.377.844-.84 1.632-1.428 2.448-.125.173-.276.37-.863 1.13l-.004.004c-.493.638-.725.941-.821 1.079C8.252 12.448 8 13.15 8 14a4 4 0 0 0 8 0c0-.851-.252-1.553-.884-2.458a40.582 40.582 0 0 0-.821-1.079l-.004-.005Z"
+                        clip-rule="evenodd"></path>
+                </svg>
+                <span id="s2" class="span2">Assignet to me</span>
+                <div id="s3" class="svg-r">
+                    <svg id="s4" class="svg-vis" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M3.5 8.75C3.5 13 7 16 12 20c5-4 8.5-7 8.5-11.25A4.75 4.75 0 0 0 15.75 4c-1.333 0-2.583.667-3.75 2-1.167-1.333-2.417-2-3.75-2A4.75 4.75 0 0 0 3.5 8.75ZM15.75 5a3.75 3.75 0 0 1 3.75 3.75c0 3.13-1.753 5.32-7.5 9.967-5.747-4.648-7.5-6.837-7.5-9.967A3.75 3.75 0 0 1 8.25 5c1.019 0 2.008.528 2.997 1.659l.753.86.753-.86C13.743 5.527 14.73 5 15.75 5Z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <svg id="s5" class="svg-vis" width="24" height="24">
+                        <g fill="none" fill-rule="evenodd">
+                            <path fill="currentColor" d="M9.5 19h10a.5.5 0 1 1 0 1h-10a.5.5 0 1 1 0-1z"></path>
+                            <path stroke="currentColor"
+                                d="M4.42 16.03a1.5 1.5 0 0 0-.43.9l-.22 2.02a.5.5 0 0 0 .55.55l2.02-.21a1.5 1.5 0 0 0 .9-.44L18.7 7.4a1.5 1.5 0 0 0 0-2.12l-.7-.7a1.5 1.5 0 0 0-2.13 0L4.42 16.02z">
+                            </path>
+                        </g>
+                    </svg>
+                    <svg id="s6" class="svg-vis" width="15" height="3" aria-hidden="true">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M1.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+
+
+            <div class="div1 " id="div2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M17 14a5 5 0 0 1-10 0c0-1.102.345-2 1.064-3.03.138-.198.534-.71.915-1.202.33-.427.65-.84.782-1.023.775-1.077 1.338-2.123 1.765-3.403a.5.5 0 0 1 .948 0c.427 1.28.99 2.326 1.765 3.403.131.183.451.596.782 1.023.38.493.776 1.004.915 1.202C16.656 12 17 12.898 17 14Zm-2.709-3.54c-.587-.76-.738-.957-.863-1.13A13.702 13.702 0 0 1 12 6.882c-.377.844-.84 1.632-1.428 2.448-.125.173-.276.37-.863 1.13l-.004.004c-.493.638-.725.941-.821 1.079C8.252 12.448 8 13.15 8 14a4 4 0 0 0 8 0c0-.851-.252-1.553-.884-2.458a40.582 40.582 0 0 0-.821-1.079l-.004-.005Z"
+                        clip-rule="evenodd"></path>
+                </svg>
+                <span class="span2">Priority 1</span>
+                <div class="svg-r">
+                    <svg class="svg-vis" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M3.5 8.75C3.5 13 7 16 12 20c5-4 8.5-7 8.5-11.25A4.75 4.75 0 0 0 15.75 4c-1.333 0-2.583.667-3.75 2-1.167-1.333-2.417-2-3.75-2A4.75 4.75 0 0 0 3.5 8.75ZM15.75 5a3.75 3.75 0 0 1 3.75 3.75c0 3.13-1.753 5.32-7.5 9.967-5.747-4.648-7.5-6.837-7.5-9.967A3.75 3.75 0 0 1 8.25 5c1.019 0 2.008.528 2.997 1.659l.753.86.753-.86C13.743 5.527 14.73 5 15.75 5Z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <svg class="svg-vis" width="24" height="24">
+                        <g fill="none" fill-rule="evenodd">
+                            <path fill="currentColor" d="M9.5 19h10a.5.5 0 1 1 0 1h-10a.5.5 0 1 1 0-1z"></path>
+                            <path stroke="currentColor"
+                                d="M4.42 16.03a1.5 1.5 0 0 0-.43.9l-.22 2.02a.5.5 0 0 0 .55.55l2.02-.21a1.5 1.5 0 0 0 .9-.44L18.7 7.4a1.5 1.5 0 0 0 0-2.12l-.7-.7a1.5 1.5 0 0 0-2.13 0L4.42 16.02z">
+                            </path>
+                        </g>
+                    </svg>
+                    <svg class="svg-vis svg-1" width="15" height="3" aria-hidden="true">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M1.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z">
+                        </path>
+                    </svg>
+                    <span class="spn-1">1</span>
+
+                </div>
+
+            </div>
+            <header id="header-2" class="header">
+                <button class="btnL">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                        <path fill="currentColor"
+                            d="M11.646 5.647a.5.5 0 0 1 .708.707l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 1 1 .708-.707L8 9.294l3.646-3.647Z">
+                        </path>
+                    </svg>
+                </button>
+                <h2 class="h2">
+                    <div class="divh2">
+                        <span>Labels</span>
+                    </div>
+                </h2>
+                <button class="btnL">
+                    <svg width="13" height="13">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.5.5 0 1 1 0 1H7v5.5a.5.5 0 1 1-1 0V7H.5a.5.5 0 0 1 0-1H6z">
+                        </path>
+                    </svg>
+
+                </button>
+            </header>
+            <div class="div1 b-top " >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="m3.914 11.086 6.5-6.5A2 2 0 0 1 11.828 4H18a2 2 0 0 1 2 2v6.172a2 2 0 0 1-.586 1.414l-6.5 6.5a2 2 0 0 1-2.828 0l-6.172-6.172a2 2 0 0 1 0-2.828Zm.707.707a1 1 0 0 0 0 1.414l6.172 6.172a1 1 0 0 0 1.414 0l6.5-6.5a1 1 0 0 0 .293-.707V6a1 1 0 0 0-1-1h-6.172a1 1 0 0 0-.707.293l-6.5 6.5ZM14.75 10.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                <span class="span2">read</span>
+                <div class="svg-r">
+                    <svg class="svg-vis" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M3.5 8.75C3.5 13 7 16 12 20c5-4 8.5-7 8.5-11.25A4.75 4.75 0 0 0 15.75 4c-1.333 0-2.583.667-3.75 2-1.167-1.333-2.417-2-3.75-2A4.75 4.75 0 0 0 3.5 8.75ZM15.75 5a3.75 3.75 0 0 1 3.75 3.75c0 3.13-1.753 5.32-7.5 9.967-5.747-4.648-7.5-6.837-7.5-9.967A3.75 3.75 0 0 1 8.25 5c1.019 0 2.008.528 2.997 1.659l.753.86.753-.86C13.743 5.527 14.73 5 15.75 5Z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <svg class="svg-vis" width="24" height="24">
+                        <g fill="none" fill-rule="evenodd">
+                            <path fill="currentColor" d="M9.5 19h10a.5.5 0 1 1 0 1h-10a.5.5 0 1 1 0-1z"></path>
+                            <path stroke="currentColor"
+                                d="M4.42 16.03a1.5 1.5 0 0 0-.43.9l-.22 2.02a.5.5 0 0 0 .55.55l2.02-.21a1.5 1.5 0 0 0 .9-.44L18.7 7.4a1.5 1.5 0 0 0 0-2.12l-.7-.7a1.5 1.5 0 0 0-2.13 0L4.42 16.02z">
+                            </path>
+                        </g>
+                    </svg>
+                    <svg class="svg-vis svg-1" width="15" height="3" aria-hidden="true">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M1.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z">
+                        </path>
+                    </svg>
+                    <span class="spn-1">2</span>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>
