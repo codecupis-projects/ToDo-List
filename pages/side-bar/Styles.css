@@ -1,0 +1,204 @@
+:root {
+  --sidebar-margin-left: -22%;
+  --sidebar-opening-btn-margin: -35%;
+  --sidebar-opening-btn-back: none;
+  --sidebar-opening-btn-opacity: 0.5;
+  --sidebar-box-back:  none;
+  --sidebar-width: 22%;
+  --sidebar-btn-width: 20%;
+  --clr--addition: rgba(0, 0, 0, 0.5);
+  --svg-fill: white;
+  --not-svg-animation: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.sidebar button {
+  cursor: pointer;
+}
+.sidebar-box.--active {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.sidebar {
+  display: flex;
+  margin-left: var(--sidebar-margin-left);
+  flex-direction: column;
+  height: 100vh;
+  width: var(--sidebar-width);
+  transition: 0.3s;
+  border-radius: 5px;
+  position: fixed;
+  z-index: 1;
+  background: white;
+  position: relative;
+}
+.sidebar button {
+  background: none;
+  border: none;
+}
+.sidebar.--open {
+  --sidebar-margin-left: 0;
+  --sidebar-opening-btn-margin: 0;
+  --sidebar-opening-btn-back: #ECECEC;
+  --sidebar-opening-btn-opacity: 1;
+}
+.sidebar__header {
+  padding-top: 5%;
+  min-width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebar__list {
+  list-style: none;
+  padding-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  z-index: 1;
+  font-size: 1rem;
+}
+.sidebar__list svg:not(.sidebar__list.sidebar__list__at__lnk svg) {
+  fill: var(--svg-fill);
+}
+.profile {
+  display: flex;
+  margin-left: 5%;
+  padding: 10px 15px 10px 5px;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.5s;
+  border-radius: 5px;
+  gap: 5px;
+  white-space: nowrap;
+}
+.profile:hover {
+  background-color: #ECECEC;
+}
+.image {
+  text-align: center;
+  min-width: 25px;
+  min-height: 25px;
+  border-radius: 5px;
+  background-color: aqua;
+}
+.sidebar__btn:nth-child(2){
+  margin-right: var(--sidebar-opening-btn-margin);
+  background: var(--sidebar-opening-btn-back);
+  opacity: var(--sidebar-opening-btn-opacity);
+}
+.sidebar__btn:nth-child(1).--active {
+  background-color: #ECECEC;
+  opacity: 1;
+  --not-svg-animation: shaping 0.25s linear forwards;
+}
+.sidebar__btn:nth-child(1) svg {
+  animation: var(--not-svg-animation);
+}
+.sidebar-btns {
+  display: flex;
+  justify-content: right;
+  margin-right: 5%;
+}
+.sidebar__btn {
+  background: none;
+  width: var(--sidebar-btn-width);
+  padding: 0.5% 1% 0 1%;
+  left: 30%;
+  border: none;
+  border-radius: 15%;
+  margin-right: 15%;
+  transition: 0.3s;
+  opacity: 0.5;
+}
+.sidebar__list a{
+  text-decoration: none;
+  white-space: nowrap;
+  color: black;
+  width: 48%;
+  padding: 3% 38% 3% 12%;
+  position: relative;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.sidebar__list a:hover {
+  background: #fcb7924a;
+  --svg-fill: #ff26007f;
+}
+.sidebar__list svg{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;;
+}
+.sidebar__project__list {
+  padding-left: 5%;
+  font-weight: bold;
+  margin-top: 5%;
+}
+.sidebar__project__btns {
+  max-width: 25%;
+}
+.sidebar__project__add, .sidebar__project__show {
+  max-width: 50%;
+}
+.sidebar__project__list li {
+  color: var(--clr--addition);
+  transition: 0.5s;
+  border-radius: 10px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  justify-content: space-between;
+  width: 90%;
+}
+.sidebar__project__list li:hover {
+  background-color: #ECECEC;
+}
+@keyframes shaping {
+  0%{transform: rotate(0deg)}
+  33%{transform: rotate(60deg)}
+  66%{transform: rotate(-60deg);}
+  100%{transform: rotate(0deg)}
+}
+@media (max-width: 1200px){
+  :root {
+    --sidebar-margin-left: -32%;
+    --sidebar-opening-btn-margin: -100%;
+    --sidebar-width: 25%;
+    --sidebar-btn-width: 20%;
+  }
+}
+@media (max-width: 992px){
+  :root {
+    --sidebar-margin-left: -38%;
+    --sidebar-opening-btn-margin: -100%;
+    --sidebar-width: 30%;
+    --sidebar-btn-width: 20%;
+  }
+}
+@media (max-width: 768px){
+  :root {
+    --sidebar-margin-left: -52%;
+    --sidebar-opening-btn-margin: -100%;
+    --sidebar-width: 40%;
+    --sidebar-btn-width: 20%;
+  }
+}
+@media (max-width: 576px){
+  :root {
+    --sidebar-margin-left: -65%;
+    --sidebar-opening-btn-margin: -90%;
+    --sidebar-width: 55%;
+    --sidebar-btn-width: 22%;
+  }
+}
