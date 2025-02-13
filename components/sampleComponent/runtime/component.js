@@ -1,5 +1,7 @@
-import { defineComponent } from 'components';
+import { defineComponent } from '../../../scripts/components.js';
+
 defineComponent({tagName: "my-component",
-    templatePath: "../runtime/template.html",
-    stylePaths: ["../runtime/styles.css"]
+    meta: import.meta,
+    templatePath: "template.html",
+    stylePaths: ["styles.css"]
 });
