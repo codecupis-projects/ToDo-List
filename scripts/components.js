@@ -15,7 +15,7 @@ export async function loadComponent({ element, meta, templatePath, stylePaths = 
     const shadow = element.attachShadow({ mode: mode });
     appendStyles(shadow, meta, stylePaths);
     shadow.appendChild(template.content.cloneNode(true));
-    appendScripts(shadow, meta, scriptPaths);
+    importScripts(shadow, meta, scriptPaths);
 }
 
 export function getAbsolutePath(meta, path) {
@@ -71,15 +71,15 @@ function appendStyle(shadow, stylePath) {
     shadow.appendChild(styleLink);
 }
 
-function appendScripts(shadow, meta, scriptPaths) {
+function importScripts(shadow, meta, scriptPaths) {
     if (scriptPaths)
         for (let i = 0; i < scriptPaths.length; i++) {
             const path = getAbsolutePath(meta, scriptPaths[i]);
-            appendScript(shadow, path);
+            importScript(shadow, path);
         }
 }
 
-async function appendScript(shadow, scriptPath) {
+async function importScript(shadow, scriptPath) {
     if (!scriptPath)
         return;
 
