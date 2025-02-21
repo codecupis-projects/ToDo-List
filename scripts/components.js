@@ -1,13 +1,22 @@
+/**
+ * Defines the component as a custom HTML element with provided tag name. It also loads
+ * the html template, styles, and scripts asynchronously.
+ * @param {Object} options - Parameters for defining the component
+ * @param {(shadow: ShadowRoot) => void} options.onLoad - The
+ * callback to be called when the component is fully loaded. Sent parameters: your html
+ * tag element, shadow root. You can use 'shadow' as the root node similar to the
+ * 'document' property in normal scripts.
+ */
 export function defineComponent({ tagName, meta, templatePath, stylePaths = null,
-    scriptPaths = null
+    onLoad = null
 }) {
     const customElement = defineCustomSimpleElement(meta, templatePath, stylePaths,
-        scriptPaths);
+        onLoad);
     customElements.define(tagName, customElement);
 }
 
 export async function loadComponent({ element, meta, templatePath, stylePaths = null,
-    scriptPaths = null, mode = "open"
+    onLoad = null, mode = "open"
 }) {
     templatePath = getAbsolutePath(meta, templatePath);
     const template = await loadTemplate(templatePath);
@@ -15,7 +24,8 @@ export async function loadComponent({ element, meta, templatePath, stylePaths = 
     const shadow = element.attachShadow({ mode: mode });
     appendStyles(shadow, meta, stylePaths);
     shadow.appendChild(template.content.cloneNode(true));
-    importScripts(shadow, meta, scriptPaths);
+    if(onLoad)
+        onLoad(element, shadow);
 }
 
 export function getAbsolutePath(meta, path) {
@@ -71,43 +81,27 @@ function appendStyle(shadow, stylePath) {
     shadow.appendChild(styleLink);
 }
 
-function importScripts(shadow, meta, scriptPaths) {
-    if (scriptPaths)
-        for (let i = 0; i < scriptPaths.length; i++) {
-            const path = getAbsolutePath(meta, scriptPaths[i]);
-            importScript(shadow, path);
-        }
-}
-
-async function importScript(shadow, scriptPath) {
-    if (!scriptPath)
-        return;
-
-    let { start } = await import(scriptPath);
-    start(shadow);
-}
-
 class SimpleElement extends HTMLElement {
-    constructor(meta, templatePath, stylePaths, scriptPaths) {
+    constructor(meta, templatePath, stylePaths, onLoad) {
         super();
-        this.loadComponent(meta, templatePath, stylePaths, scriptPaths);
+        this.loadComponent(meta, templatePath, stylePaths, onLoad);
     }
 
-    async loadComponent(meta, templatePath, stylePaths, scriptPaths) {
+    async loadComponent(meta, templatePath, stylePaths, onLoad) {
         await loadComponent({
             element: this,
             meta: meta,
             templatePath: templatePath,
             stylePaths: stylePaths,
-            scriptPaths: scriptPaths
+            onLoad: onLoad
         });
     }
 }
 
-function defineCustomSimpleElement(meta, templatePath, stylePaths, scriptPaths) {
+function defineCustomSimpleElement(meta, templatePath, stylePaths, onLoad) {
     return class extends SimpleElement {
         constructor() {
-            super(meta, templatePath, stylePaths, scriptPaths);
+            super(meta, templatePath, stylePaths, onLoad);
         }
     }
 }
