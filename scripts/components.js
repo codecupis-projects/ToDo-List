@@ -2,7 +2,7 @@
  * Defines the component as a custom HTML element with provided tag name. It also loads
  * the html template, styles, and scripts asynchronously.
  * @param {Object} options - Parameters for defining the component
- * @param {(element: HTMLElement, shadow: ShadowRoot) => void} options.onLoad - The
+ * @param {(shadow: ShadowRoot) => void} options.onLoad - The
  * callback to be called when the component is fully loaded. Sent parameters: your html
  * tag element, shadow root. You can use 'shadow' as the root node similar to the
  * 'document' property in normal scripts.
@@ -25,7 +25,7 @@ export async function loadComponent({ element, meta, templatePath, stylePaths = 
     appendStyles(shadow, meta, stylePaths);
     shadow.appendChild(template.content.cloneNode(true));
     if(onLoad)
-        onLoad(element, shadow);
+        onLoad(shadow);
 }
 
 export function getAbsolutePath(meta, path) {
@@ -42,7 +42,7 @@ export function getAbsolutePath(meta, path) {
     }
 
     // Return path itself if it's absolute
-    if (path.includes("//") || path.includes("http"))
+    if (path.includes("//") || path.includes("http") || path[0] === '/')
         return path;
 
     // Ensure relative path contains slash

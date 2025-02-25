@@ -1,18 +1,25 @@
 <style>
     .container{
         display: flex;
-        flex-direction: column; 
+        flex-direction: row;
+        justify-content: space-around; 
     }
 
     .list-item{
-        border: blue solid 2px;
-        color: green;
+        border: green solid 2px;
+        padding: 2px;
+    }
+
+    ul, li{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
     }
 </style>
 
-<div class="container">
-    <h1><slot></slot></h1>
-    <ul>
+<div>
+    <h2><slot></slot></h2>
+    <ul class="container">
         <li class="list-item"><my-component>A</my-component></li>
         <li class="list-item"><my-component>B</my-component></li>
         <li class="list-item"><my-component>C</my-component></li>
