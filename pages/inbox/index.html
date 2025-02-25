@@ -4,59 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List - Inbox</title>
+    <link
+      rel="shortcut icon"
+      href="../../assets/icons/todoist.ico"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="/global.css">
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet">
     <script src="https://kit.fontawesome.com/46675d0a76.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="title">
-        Inbox Page
-    </header>
-    <main class="main">
-        <ul class="sections">
-            <li class="sections-item">
-                <div class="sections-item__move-handle"></div>
-                <div class="sections-item__container">
-                    <div class="section">
-                        <div class="section__title">
-                            <div class="section__name">Welcome</div>
-                            <div class="section__count">3</div>
-                            <div class="section__ellipsis"></div>
-                        </div>
-                        <div class="section__list-container">
-                            <ul class="section-list">
-                                <li class="item">
-                                    <div class="item__move-handle"></div>
-                                    <div class="item__checkbox checkbox">
-                                        <i class="tick fa-solid fa-check"></i>
-                                    </div>
-                                    <div class="item__title-date">
-                                        <div class="item__title">Join existing team projects</div>
-                                        <div class="item__date">Sep 16 2024</div>
-                                    </div>
-                                    <div class="item__buttons">
-                                        <div class="item__button-edit">
-                                            <i class="fa-regular fa-pen-to-square"></i>
-                                        </div>
-                                        <div class="item__button-date">
-                                            <i class="fa-regular fa-calendar-days"></i>
-                                        </div>
-                                        <div class="item__button-comment">
-                                            <i class="fa-regular fa-comment"></i>
-                                        </div>
-                                        <div class="item__button-ellipsis">
-                                            <i class="fa-solid fa-ellipsis"></i>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+    <inbox-element style="display: block; width: 100%; height: 200px;"></inbox-element>
+    <div class="todolist-app">
+        <div class="side-bar">Side Bar</div>
+        <div class="page-content">
+            <header class="header">
+                <div class="top-bar">
+                    <div class="top-bar__section"></div>
+                    <div class="top-bar__section"></div>
+                    <div class="top-bar__section">
+                        <ul class="page-options">
+                            <li class="page-options__view">
+                                <button class="page-options__view-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="" fill-rule="nonzero" d="M15 14.5a2 2 0 0 1 1.936 1.498L19.5 16a.5.5 0 0 1 0 1l-2.563.001a2.001 2.001 0 0 1-3.874 0L4.5 17a.5.5 0 0 1 0-1l8.564-.002A2 2 0 0 1 15 14.5zm-.982 1.81.005-.025-.005.026-.003.014-.004.025-.007.061A.897.897 0 0 0 14 16.5l.008.125.007.047-.001.002.003.014.006.024h-.001l.004.018.016.058.007.021.004.013.009.026.013.033.012.027-.011-.026.019.043-.008-.017.029.06-.018-.037.048.09a1 1 0 0 0 1.784-.155l.015-.039.006-.018-.015.039.022-.06-.001-.001.016-.057.004-.018.005-.024.001-.006v-.001l.005-.033.008-.06A.877.877 0 0 0 16 16.5l-.008-.124-.007-.051-.001-.001-.003-.014-.01-.047-.004-.016-.007-.024-.01-.034-.004-.012-.01-.03-.006-.013-.007-.017-.01-.026a.998.998 0 0 0-1.843.043l-.014.034-.007.022-.014.047-.002.009v.001l-.005.016-.01.047zM9 9.5a2 2 0 0 1 1.936 1.498L19.5 11a.5.5 0 0 1 0 1l-8.563.001a2.001 2.001 0 0 1-3.874 0L4.5 12a.5.5 0 0 1 0-1l2.564-.002A2 2 0 0 1 9 9.5zm0 1a.998.998 0 0 0-.93.634l-.014.034-.007.022-.014.047-.002.009v.001l-.005.016-.01.047.005-.025-.005.026-.003.014-.004.025-.007.061C8 11.441 8 11.471 8 11.5l.008.125.007.047-.001.002.003.014.006.024h-.001l.004.018.016.058.007.021.004.013.009.026.013.033.012.027-.011-.026.019.043-.008-.017.029.06-.018-.037.048.09a1 1 0 0 0 1.784-.155l.015-.039.006-.018-.015.039.022-.06-.001-.001.016-.057.004-.018.005-.024.001-.006v-.001l.005-.033.008-.06A.877.877 0 0 0 10 11.5l-.008-.124-.007-.051-.001-.001-.003-.014-.01-.047-.004-.016-.007-.024-.01-.034-.004-.012-.01-.03-.006-.013-.007-.017-.01-.026A1.002 1.002 0 0 0 9 10.5zm6-6a2 2 0 0 1 1.936 1.498L19.5 6a.5.5 0 0 1 0 1l-2.563.001a2.001 2.001 0 0 1-3.874 0L4.5 7a.5.5 0 0 1 0-1l8.564-.002A2 2 0 0 1 15 4.5zm0 1a.998.998 0 0 0-.93.634l-.014.034-.007.022-.014.047-.002.009v.001l-.005.016-.01.047.005-.025-.005.026-.003.014-.004.025-.007.061C14 6.441 14 6.471 14 6.5l.008.125.007.047-.001.002.003.014.006.024h-.001l.004.018.016.058.007.021.004.013.009.026.013.033.012.027-.011-.026.019.043-.008-.017.029.06-.018-.037.048.09a1 1 0 0 0 1.784-.155l.015-.039.006-.018-.015.039.022-.06-.001-.001.016-.057.004-.018.005-.024.001-.006v-.001l.005-.033.008-.06C16 6.557 16 6.528 16 6.5l-.008-.124-.007-.051-.001-.001-.003-.014-.01-.047-.004-.016-.007-.024-.01-.034-.004-.012-.01-.03-.006-.013-.007-.017-.01-.026A1.002 1.002 0 0 0 15 5.5z"></path></svg>
+                                </button>
+                            </li>
+                            <li class="page-options__comment"></li>
+                            <li class="page-options__more-actions"></li>
+                        </ul>
                     </div>
                 </div>
-            </li>
-        </ul>
-    </main>
+                <div class="title">
+                    <h1>Inbox</h1>
+                </div>
+            </header>
+            <main class="main">
+                <ul class="sections">
+                    <li class="sections-item">
+                        <div class="sections-item__move-handle">
+                            <button>
+                                <i class="fa "></i>
+                            </button>
+                        </div>
+                        <div class="sections-item__container">
+                            <div class="section">
+                                <div class="section__title">
+                                    <div class="section__name">Welcome</div>
+                                    <div class="section__count">3</div>
+                                    <div class="section__ellipsis"></div>
+                                </div>
+                                <div class="section__list-container">
+                                    <ul class="section-list">
+                                        <li class="item">
+                                            <div class="item__move-handle"></div>
+                                            <div class="item__checkbox checkbox">
+                                                <i class="tick fa-solid fa-check"></i>
+                                            </div>
+                                            <div class="item__title-date">
+                                                <div class="item__title">Join existing team projects</div>
+                                                <div class="item__date">Sep 16 2024</div>
+                                            </div>
+                                            <div class="item__buttons">
+                                                <div class="item__button-edit">
+                                                    <i class="fa-regular fa-pen-to-square"></i>
+                                                </div>
+                                                <div class="item__button-date">
+                                                    <i class="fa-regular fa-calendar-days"></i>
+                                                </div>
+                                                <div class="item__button-comment">
+                                                    <i class="fa-regular fa-comment"></i>
+                                                </div>
+                                                <div class="item__button-ellipsis">
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="item__move-handle"></div>
+                                            <div class="item__checkbox checkbox">
+                                                <i class="tick fa-solid fa-check"></i>
+                                            </div>
+                                            <div class="item__title-date">
+                                                <div class="item__title">Join existing team projects</div>
+                                                <div class="item__date">Sep 16 2024</div>
+                                            </div>
+                                            <div class="item__buttons">
+                                                <div class="item__button-edit">
+                                                    <i class="fa-regular fa-pen-to-square"></i>
+                                                </div>
+                                                <div class="item__button-date">
+                                                    <i class="fa-regular fa-calendar-days"></i>
+                                                </div>
+                                                <div class="item__button-comment">
+                                                    <i class="fa-regular fa-comment"></i>
+                                                </div>
+                                                <div class="item__button-ellipsis">
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="item__move-handle"></div>
+                                            <div class="item__checkbox checkbox">
+                                                <i class="tick fa-solid fa-check"></i>
+                                            </div>
+                                            <div class="item__title-date">
+                                                <div class="item__title">Join existing team projects</div>
+                                                <div class="item__date">Sep 16 2024</div>
+                                            </div>
+                                            <div class="item__buttons">
+                                                <div class="item__button-edit">
+                                                    <i class="fa-regular fa-pen-to-square"></i>
+                                                </div>
+                                                <div class="item__button-date">
+                                                    <i class="fa-regular fa-calendar-days"></i>
+                                                </div>
+                                                <div class="item__button-comment">
+                                                    <i class="fa-regular fa-comment"></i>
+                                                </div>
+                                                <div class="item__button-ellipsis">
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </main>
+        </div>
+    </div>
     
 </body>
 </html>

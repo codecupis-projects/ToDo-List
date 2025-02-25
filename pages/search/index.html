@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>search</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/Css/all.min.css" />
+</head>
+
+<body>
+  <div class="sh-div">
+    <div class="search">
+      <i class="fa-light fa-magnifying-glass"></i>
+      <input class="input" autocomplete="off" id=":re:" role="combobox" aria-autocomplete="list" aria-haspopup="listbox"
+        aria-expanded="true" placeholder="Search or type a command…" aria-label="Search or type a command…"
+        auto-complete="off" value="" aria-controls=":rf:" data-active-item="true" />
+      <kbd class="kbd1">Ctl</kbd>
+      <kbd class="kbd2">K</kbd>
+    </div>
+    <div class="scroll-box">
+      <div class="recently-viewed one">
+        <span class="top"></span> <!-- cope -->
+        <span class="s1">Recently viewed</span>
+        <div class="tow red"> <!-- cope -->
+          <svg width="24" height="24" viewBox="0 0 24 24" class="quick_find__today_icon" aria-hidden="true">
+            <g fill="currentColor" fill-rule="evenodd">
+              <path fill-rule="nonzero"
+                d="M6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H6zm1 3h10a.5.5 0 1 1 0 1H7a.5.5 0 0 1 0-1z">
+              </path>
+              <text
+                font-family="-apple-system, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                font-size="9" transform="translate(4 2)" font-weight="500">
+                <tspan x="8" y="15" text-anchor="middle">24</tspan>
+              </text>
+            </g>
+          </svg>
+          <span class="s2 red">Today</span>
+        </div>
+      </div>
+      <div class="navigation one">
+        <span class="top"></span>
+        <span class="s1">Navigation</span>
+        <div class=" tow home red">
+          <div class="home1 ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M12.527 3.075c.35.104.64.263 1.27.876L19.1 9.123c.374.364.49.505.601.678.11.174.185.351.232.552.042.178.062.34.066.742L20 17.718c0 .446-.046.607-.134.77a.906.906 0 0 1-.378.378c-.163.088-.324.134-.77.134H14v-4.718c0-.446-.046-.607-.134-.77a.906.906 0 0 0-.378-.378c-.142-.077-.284-.122-.616-.132L12.718 13h-1.436c-.446 0-.607.046-.77.134a.906.906 0 0 0-.378.378c-.077.142-.122.284-.132.616l-.002.154V19H5.282c-.446 0-.607-.046-.77-.134a.906.906 0 0 1-.378-.378c-.088-.163-.134-.324-.134-.77v-6.462c0-.522.02-.703.067-.903.047-.2.121-.378.232-.552l.077-.113c.098-.134.233-.282.524-.565l5.304-5.172c.629-.613.92-.772 1.269-.876a1.82 1.82 0 0 1 1.054 0zm-.286.958a.825.825 0 0 0-.482 0c-.18.054-.326.139-.63.418l-.227.216L5.598 9.84c-.3.293-.385.39-.456.5a.76.76 0 0 0-.102.242c-.026.112-.037.224-.04.531l.002 6.807.005.073.074.006L8.999 18 9 14.268l.003-.17c.013-.448.083-.749.249-1.058a1.9 1.9 0 0 1 .788-.788c.306-.164.6-.234 1.043-.249l.199-.003h1.45l.17.003c.448.013.749.083 1.058.249.337.18.608.45.788.788.164.306.234.6.249 1.043l.003.199L14.999 18l3.92-.002.073-.006.006-.073.002-.2v-6.615l-.005-.218a1.494 1.494 0 0 0-.035-.305.747.747 0 0 0-.102-.242l-.059-.084a3.571 3.571 0 0 0-.294-.315l-5.407-5.273c-.425-.414-.604-.545-.798-.615l-.06-.019z">
+              </path>
+            </svg>
+            <span class="s2">Go to home</span>
+          </div>
+          <div style=" height: 1rem; width: 25.7rem;"></div> <!--hr space-->
+          <div class="home2">
+            <kbd>G</kbd>
+            <span>then</span>
+            <kbd>H</kbd>
+          </div>
+        </div>
+        <!-- <div class="a red-a"> -->
+        <div class="red home tow">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewbox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M8.062 4h7.876a2 2 0 0 1 1.94 1.515l2.062 8.246c.04.159.06.322.06.486V18a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3.754a2 2 0 0 1 .06-.485L6.12 5.515A2 2 0 0 1 8.061 4Zm0 1a1 1 0 0 0-.97.758L5.03 14.004a1 1 0 0 0-.03.242V18a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.754a.997.997 0 0 0-.03-.242L16.91 5.758a1 1 0 0 0-.97-.758H8.061Zm6.643 10a2.75 2.75 0 0 1-5.41 0H7a.5.5 0 1 1 0-1h2.75a.5.5 0 0 1 .5.5 1.75 1.75 0 1 0 3.5 0 .5.5 0 0 1 .5-.5H17a.5.5 0 0 1 0 1h-2.295Z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Go to Inbox</span>
+          </div>
+          <div style=" height: 1rem;
+          width: 25.7rem;"></div>
+          <div class="home2">
+            <kbd>G</kbd>
+            <span>then</span>
+            <kbd>i</kbd>
+          </div>
+        </div>
+        <!-- </div> -->
+        <div class="home tow red">
+          <div class="home1">
+            <svg width="24" height="24" viewBox="0 0 24 24" class="quick_find__today_icon" aria-hidden="true">
+              <g fill="currentColor" fill-rule="evenodd">
+                <path fill-rule="nonzero"
+                  d="M6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H6zm1 3h10a.5.5 0 1 1 0 1H7a.5.5 0 0 1 0-1z">
+                </path>
+                <text
+                  font-family="-apple-system, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                  font-size="9" transform="translate(4 2)" font-weight="500">
+                  <tspan x="8" y="15" text-anchor="middle">24</tspan>
+                </text>
+              </g>
+            </svg>
+            <span class="s2">Go to Today</span>
+          </div>
+          <div style=" height: 1rem;
+          width: 25.6rem;"></div>
+          <div class="home2">
+            <kbd>G</kbd>
+            <span>then</span>
+            <kbd>T</kbd>
+          </div>
+        </div>
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H6Zm10 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm-3-1a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-5 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm9-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-5 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm-3-1a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM7 8a.5.5 0 0 0 0 1h10a.5.5 0 0 0 0-1H7Z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Go to Upcoming</span>
+          </div>
+          <div style=" height: 1rem; width: 23.9rem;"></div>
+          <div class="home2">
+            <kbd>G</kbd>
+            <span>then</span>
+            <kbd>U</kbd>
+          </div>
+        </div>
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M17.5 6.001h-3a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5Zm-3-1a1.5 1.5 0 0 0-1.5 1.5v3a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5v-3a1.5 1.5 0 0 0-1.5-1.5h-3Zm-8 9h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5Zm-1.5.5a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a1.5 1.5 0 0 1-1.5-1.5v-3Zm9.5-.5h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5Zm-1.5.5a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a1.5 1.5 0 0 1-1.5-1.5v-3Zm-6.5-8.5h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5Zm-1.5.5a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a1.5 1.5 0 0 1-1.5-1.5v-3Z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Go to Filters & Labels</span>
+          </div>
+          <div style="  width: 22rem;  height: 1rem;"></div>
+          <div class="home2">
+            <kbd>G</kbd>
+            <span>then</span>
+            <kbd>V</kbd>
+          </div>
+        </div>
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M12 21.001a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0-1a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm-4.354-8.104a.5.5 0 0 1 .708 0l2.146 2.147 5.146-5.147a.5.5 0 0 1 .708.708l-5.5 5.5a.5.5 0 0 1-.708 0l-2.5-2.5a.5.5 0 0 1 0-.708Z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Go to Completed</span>
+          </div>
+          <div style="width:23.6rem;   height: 1rem;"></div>
+          <div class="home2">
+            <kbd>G</kbd>
+            <span>then</span>
+            <kbd>C</kbd>
+          </div>
+        </div>
+
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M6 5h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 1a1 1 0 0 0-1 1v5h2.691l1.362-2.724a.5.5 0 0 1 .917.053l1.473 4.05 1.576-5.516a.5.5 0 0 1 .938-.066L15.825 12H19V7a1 1 0 0 0-1-1H6Zm13 7h-3.5a.5.5 0 0 1-.457-.297l-1.44-3.241-1.622 5.675a.5.5 0 0 1-.95.034l-1.604-4.408-.98 1.96A.5.5 0 0 1 8 13H5v4a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-4Z"
+                clip-rule="evenodd"></path>
+            </svg> <span class="s2">Go to activity</span>
+          </div>
+          <div  style=" height: 1rem; width: 25.1rem;"></div>
+          <div class="home2">
+            <kbd>G</kbd>
+            <span>then</span>
+            <kbd>A</kbd>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M10.5 17h9a.5.5 0 1 1 0 1h-9a.5.5 0 1 1 0-1zm0-6h9a.5.5 0 1 1 0 1h-9a.5.5 0 1 1 0-1zm0-6h9a.5.5 0 1 1 0 1h-9a.5.5 0 1 1 0-1zM5.75 18.75a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm0-6a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm0-6a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z">
+              </path>
+            </svg> <span class="s2">Open project...</span>
+          </div>
+          <div  style=" height: 1rem; width: 24.7rem;"></div>
+          <div class="home2">
+            <kbd>G</kbd>
+            <span>then</span>
+            <kbd>P</kbd>
+          </div>
+        </div>
+
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M4 3.5a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 0-1h-15a.5.5 0 0 0-.5.5ZM18 6H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2ZM4 20.5a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 0-1h-15a.5.5 0 0 0-.5.5ZM6 7a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H6Z"
+                clip-rule="evenodd"></path>
+            </svg><span class="s2">Open section...</span>
+          </div>
+          <div  style=" height: 1rem; width: 24.7rem;"></div>
+          <div class="home2">
+            <kbd>G</kbd>
+            <span>then</span>
+            <kbd>/</kbd>
+          </div>
+        </div>
+
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="m3.914 11.086 6.5-6.5A2 2 0 0 1 11.828 4H18a2 2 0 0 1 2 2v6.172a2 2 0 0 1-.586 1.414l-6.5 6.5a2 2 0 0 1-2.828 0l-6.172-6.172a2 2 0 0 1 0-2.828Zm.707.707a1 1 0 0 0 0 1.414l6.172 6.172a1 1 0 0 0 1.414 0l6.5-6.5a1 1 0 0 0 .293-.707V6a1 1 0 0 0-1-1h-6.172a1 1 0 0 0-.707.293l-6.5 6.5ZM14.75 10.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z"
+                clip-rule="evenodd"></path>
+            </svg> <span class="s2">Open lable...</span>
+          </div>
+          <div  style=" height: 1rem; width: 25.6rem;"></div>
+          <div class="home2">
+            <kbd>G</kbd>
+            <span>then</span>
+            <kbd>L</kbd>
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+
+      <div class="add one">
+        <span class="top"></span>
+        <span class="s1">Add</span>
+        <div class="home tow red">
+          <div class="home1">
+            <svg width="13" height="13">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.5.5 0 1 1 0 1H7v5.5a.5.5 0 1 1-1 0V7H.5a.5.5 0 0 1 0-1H6z"></path>
+            </svg>
+            <span class="s2">Add task</span>
+          </div>
+          <div  style=" height: 1rem; width: 30.7rem;"></div>
+          <div class="home2">
+            <kbd>Q</kbd>
+          </div>
+        </div>
+
+      </div>
+      <div class="add one">
+        <div class="home tow red">
+          <div class="home1">
+            <svg width="13" height="13">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.5.5 0 1 1 0 1H7v5.5a.5.5 0 1 1-1 0V7H.5a.5.5 0 0 1 0-1H6z"></path>
+            </svg>
+            <span class="s2">Add task for tomorrow</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="add one">
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <path fill="currentColor"
+                d="M18 4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h12zm0 1H6a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1zm-4.784 5.589a.501.501 0 0 1 .638.057l.057.07a.501.501 0 0 1-.057.638L12.208 13H17a.5.5 0 0 1 0 1h-4.792l1.646 1.646.057.07a.501.501 0 0 1-.765.638l-2.5-2.5-.057-.07a.501.501 0 0 1 .057-.638l2.5-2.5zM8 12.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2zM17 8a.5.5 0 0 1 0 1H7a.5.5 0 0 1 0-1h10z">
+              </path>
+            </svg>
+            <path fill="currentColor" fill-rule="evenodd"
+              d="m3.914 11.086 6.5-6.5A2 2 0 0 1 11.828 4H18a2 2 0 0 1 2 2v6.172a2 2 0 0 1-.586 1.414l-6.5 6.5a2 2 0 0 1-2.828 0l-6.172-6.172a2 2 0 0 1 0-2.828Zm.707.707a1 1 0 0 0 0 1.414l6.172 6.172a1 1 0 0 0 1.414 0l6.5-6.5a1 1 0 0 0 .293-.707V6a1 1 0 0 0-1-1h-6.172a1 1 0 0 0-.707.293l-6.5 6.5ZM14.75 10.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z"
+              clip-rule="evenodd"></path>
+            </svg> <span class="s2">Go back to today</span>
+          </div>
+          <div  style=" height: 1rem; width: 24.4rem;"></div>
+          <div class="home2">
+            <kbd>Alt</kbd>
+            <kbd>⇧</kbd>
+            <kbd>Y</kbd>
+          </div>
+        </div>
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <path fill="currentColor"
+                d="M11.145 5.148a.5.5 0 0 1 .71.704L6.738 11H17.5a.5.5 0 0 1 0 1H6.738l5.117 5.148a.5.5 0 0 1-.71.704l-5.964-6-.025-.027A.44.44 0 0 1 5 11.5c0-.124.059-.238.156-.325l.025-.027 5.964-6z">
+              </path>
+            </svg>
+            <span class="s2">Go to previous week</span>
+          </div>
+          <div  style=" height: 1rem; width: 24.6rem;"></div>
+          <div class="home2">
+            <kbd>⇧</kbd>
+            <kbd>←</kbd>
+          </div>
+        </div>
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <path fill="currentColor"
+                d="M11.855 5.148a.5.5 0 0 0-.71.704L16.262 11H5.5a.5.5 0 0 0 0 1h10.762l-5.117 5.148a.5.5 0 0 0 .71.704l5.964-6 .025-.027c.097-.088.156-.201.156-.325s-.059-.238-.156-.325l-.025-.027-5.964-6z">
+              </path>
+            </svg>
+            <span class="s2">Go to next week</span>
+          </div>
+          <div  style=" height: 1rem; width: 26.2rem;"></div>
+          <div class="home2">
+            <kbd>⇧</kbd>
+            <kbd>→</kbd>
+          </div>
+        </div>
+      </div>
+      <div class="templates one">
+        <span class="top"></span> 
+        <span class="s1">Templates</span>
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M10.241 4.004h3.513c.554 0 1.004.448 1.004 1v9.638l-5.52-7.855V5.004c0-.552.449-1 1.003-1Zm4.844 15.4.048-.074a3.772 3.772 0 0 1-6.218.074L1.863 9.37a1.995 1.995 0 0 1 .493-2.786l2.878-2.007a2.012 2.012 0 0 1 2.795.49l.205.292v-.355c0-1.105.899-2 2.007-2h3.513c1.109 0 2.007.895 2.007 2v.361l.21-.298a2.012 2.012 0 0 1 2.796-.492l2.877 2.008a1.995 1.995 0 0 1 .493 2.785l-7.052 10.035Zm.676-12.295v9.589l5.554-7.903a.998.998 0 0 0-.247-1.393l-2.877-2.007a1.006 1.006 0 0 0-1.398.245L15.761 7.11ZM5.81 5.396 2.932 7.403a.998.998 0 0 0-.247 1.393L9.737 18.83a2.766 2.766 0 0 0 3.844.675 2.744 2.744 0 0 0 .678-3.83L7.207 5.64a1.006 1.006 0 0 0-1.398-.245Zm6.189 12.983a1.002 1.002 0 0 1-1.004-1c0-.552.45-1 1.004-1s1.003.448 1.003 1-.45 1-1.003 1Z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">browse templates</span>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="templates one">
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <g fill="none" fill-rule="evenodd">
+                <g fill="currentColor" fill-rule="nonzero">
+                  <g>
+                    <g>
+                      <path
+                        d="M12 3c4.97 0 9 4.03 9 9s-4.03 9-9 9-9-4.03-9-9 4.03-9 9-9zm0 1c-4.418 0-8 3.582-8 8 0 .702.09 1.383.26 2.031l2.886-2.885c.196-.195.512-.195.708 0l2.646 2.647 4.793-4.794L13 9c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h3.52l.052.005L16.5 8c.036 0 .071.004.105.011l.046.012.04.015c.014.005.027.012.04.019.013.006.025.013.036.02l.035.025c.014.01.027.02.04.033l.012.011.011.013c.012.012.023.025.033.039l-.044-.052c.026.027.05.056.069.087l.02.034.02.042.014.04c.005.015.009.03.012.046l.006.033.005.051V12c0 .276-.224.5-.5.5s-.5-.224-.5-.5V9.706l-5.146 5.148c-.196.195-.512.195-.708 0L7.5 12.207 4.618 15.09C5.827 17.974 8.677 20 12 20c4.418 0 8-3.582 8-8s-3.582-8-8-8z"
+                        transform="translate(-564 -480) translate(528 444) translate(36 36)"></path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <span class="s2">Open Productivity</span>
+          </div>
+          <div  style=" height: 1rem; width: 23rem;"></div>
+          <div class="home2">
+            <kbd>O</kbd>
+            <span>then</span>
+            <kbd>P</kbd>
+          </div>
+        </div>
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="m6.585 15.388-.101.113c-.286.322-.484.584-.484 1h12c0-.416-.198-.678-.484-1l-.101-.113c-.21-.233-.455-.505-.7-.887-.213-.33-.355-.551-.458-.79-.209-.482-.256-1.035-.4-2.71-.214-3.5-1.357-5.5-3.857-5.5s-3.643 2-3.857 5.5c-.144 1.675-.191 2.227-.4 2.71-.103.239-.245.46-.457.79-.246.382-.491.654-.701.887Zm10.511-2.312c-.083-.341-.131-.862-.241-2.148-.113-1.811-.469-3.392-1.237-4.544C14.8 5.157 13.57 4.5 12 4.5c-1.571 0-2.8.656-3.618 1.883-.768 1.152-1.124 2.733-1.237 4.544-.11 1.286-.158 1.807-.241 2.148-.062.253-.13.373-.46.884-.198.308-.373.504-.57.723-.074.081-.15.166-.232.261-.293.342-.642.822-.642 1.557a1 1 0 0 0 1 1h3a3 3 0 0 0 6 0h3a1 1 0 0 0 1-1c0-.735-.35-1.215-.642-1.557-.082-.095-.158-.18-.232-.261-.197-.22-.372-.415-.57-.723-.33-.511-.398-.63-.46-.884ZM14 17.5h-4a2 2 0 1 0 4 0Z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Open notification</span>
+          </div>
+          <div  style=" height: 1rem; width: 23.3rem;"></div>
+          <div class="home2">
+            <kbd>O</kbd>
+            <span>then</span>
+            <kbd>N</kbd>
+          </div>
+        </div>
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <path fill="currentColor"
+                d="M12 3a9 9 0 0 1 7.079 14.559l.143-.187a8.91 8.91 0 0 1-.536.653l-.073.08-.117.124a8.4 8.4 0 0 1-.637.603l-.098.083c-.05.042-.1.083-.152.124l-.074.058c-.044.034-.087.068-.132.101l-.106.079c-.04.03-.08.058-.12.086l-.125.087-.049.032a8.919 8.919 0 0 1-.604.372l-.033.018-.064.035-.176.094-.055.028a8.001 8.001 0 0 1-.208.102l-.044.02c-.064.031-.13.061-.196.09l-.095.041-.13.054-.121.049a8.967 8.967 0 0 1-.507.18l-.095.03c-.075.024-.15.046-.225.068l-.03.008-.228.06-.07.017c-.273.066-.552.12-.835.16l-.12.017-.185.022-.108.011-.16.014-.143.01a6.961 6.961 0 0 1-.204.01l-.062.003A10.34 10.34 0 0 1 12 21h-.005l-.26-.004-.04-.001L12 21a8.95 8.95 0 0 1-.367-.007l-.204-.01-.144-.011-.16-.014-.106-.01-.186-.023-.12-.016a9.206 9.206 0 0 1-.836-.16l-.069-.018-.228-.06-.03-.008-.225-.067-.095-.03a9.838 9.838 0 0 1-.507-.181l-.121-.049-.13-.054-.095-.04-.197-.09-.043-.02c-.07-.034-.14-.068-.208-.103L7.874 20a5.937 5.937 0 0 1-.176-.094l-.064-.035-.033-.018a9.224 9.224 0 0 1-.604-.372c-.017-.01-.033-.022-.05-.033l-.124-.086-.12-.086-.107-.08c-.044-.032-.087-.066-.13-.1l-.076-.059-.15-.123c-.034-.027-.066-.055-.099-.083a9.688 9.688 0 0 1-.638-.603l-.116-.124-.073-.08a9.609 9.609 0 0 1-.347-.409l-.045-.057A9 9 0 0 1 12 3zm0 13c-2.82 0-4.978.519-5.94 1.36A7.985 7.985 0 0 0 12 20c2.302 0 4.44-.978 5.94-2.64C16.978 16.518 14.82 16 12 16zm0-12a8 8 0 0 0-6.561 12.578C6.742 15.472 9.253 15 12 15s5.258.472 6.562 1.577A8 8 0 0 0 12 4zm0 2.5a3.75 3.75 0 1 1 0 7.5 3.75 3.75 0 0 1 0-7.5zm0 1a2.75 2.75 0 1 0 0 5.5 2.75 2.75 0 0 0 0-5.5z">
+              </path>
+            </svg>
+            <span class="s2">Open user menu</span>
+          </div>
+          <div  style=" height: 1rem; width: 23.5rem;"></div>
+          <div class="home2">
+            <kbd>O</kbd>
+            <span>then</span>
+            <kbd>U</kbd>
+          </div>
+        </div>
+      </div>
+      <div class="help one">
+        <span class="top"></span> 
+        <span class="s1">Help</span>
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <g fill="currentColor" fill-rule="evenodd">
+                <path
+                  d="M6.5 14h2v1h-2v-1zm10-2h1v1h-1v-1zm0-2h1v1h-1v-1zm-10 2h1v1h-1v-1zm0-2h1v1h-1v-1zm2 2h1v1h-1v-1zm0-2h1v1h-1v-1zm2 2h1v1h-1v-1zm0-2h1v1h-1v-1zm2 2h1v1h-1v-1zm0-2h1v1h-1v-1zm2 2h1v1h-1v-1zm0-2h1v1h-1v-1zm1 4h2v1h-2v-1zm-6 0h5v1h-5v-1z">
+                </path>
+                <path fill-rule="nonzero"
+                  d="M6.56 7c-.66 0-.86.04-1.07.15a.82.82 0 0 0-.34.34C5.04 7.7 5 7.9 5 8.56v6.88c0 .66.04.86.15 1.07a.82.82 0 0 0 .34.34c.21.11.41.15 1.07.15h10.88c.66 0 .86-.04 1.07-.15a.82.82 0 0 0 .34-.35c.11-.2.15-.4.15-1.06V8.56c0-.66-.04-.86-.15-1.07a.82.82 0 0 0-.35-.34c-.2-.11-.4-.15-1.06-.15H6.56zm0-1h10.88c.89 0 1.21.1 1.54.27.32.17.58.43.75.75.18.33.27.65.27 1.54v6.88c0 .89-.1 1.21-.27 1.54a1.8 1.8 0 0 1-.75.75c-.33.18-.65.27-1.54.27H6.56c-.89 0-1.21-.1-1.54-.27a1.82 1.82 0 0 1-.75-.75c-.18-.33-.27-.65-.27-1.54V8.56c0-.89.1-1.21.27-1.54.17-.32.43-.58.75-.75.33-.18.65-.27 1.54-.27z">
+                </path>
+              </g>
+            </svg>
+            <span class="s2">Show keyboard shortcuts</span>
+          </div>
+          <div  style=" height: 1rem; width: 23.5rem;"></div>
+          <div class="home2">
+            <kbd>?</kbd>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="Miscellaneous one">
+        <span class="top"></span> 
+        <span class="s1">Miscellaneous</span>
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <g fill="none" fill-rule="evenodd">
+                <path fill="currentColor" fill-rule="nonzero"
+                  d="M15 18v-1h2.44c.66 0 .86-.04 1.07-.15a.82.82 0 0 0 .34-.35c.11-.2.15-.4.15-1.06v-4.88c0-.66-.04-.86-.15-1.07a.82.82 0 0 0-.35-.34c-.2-.11-.4-.15-1.06-.15H6.56c-.66 0-.86.04-1.07.15a.82.82 0 0 0-.34.34C5.04 9.7 5 9.9 5 10.56v4.88c0 .66.04.86.15 1.07a.82.82 0 0 0 .34.34c.21.11.41.15 1.07.15H9v1H6.56c-.89 0-1.21-.1-1.54-.27a1.82 1.82 0 0 1-.75-.75c-.18-.33-.27-.65-.27-1.54v-4.88c0-.89.1-1.21.27-1.54.17-.32.43-.58.75-.75.33-.18.65-.27 1.54-.27h10.88c.89 0 1.21.1 1.54.27.32.17.58.43.75.75.18.33.27.65.27 1.54v4.88c0 .89-.1 1.21-.27 1.54a1.8 1.8 0 0 1-.75.75c-.33.18-.65.27-1.54.27H15z">
+                </path>
+                <path stroke="currentColor"
+                  d="M15.5 13.5h-7v3.94c0 .73.05 1.01.2 1.3.14.24.32.42.56.55.29.16.57.21 1.3.21h2.88c.73 0 1.01-.05 1.3-.2.24-.14.42-.32.55-.56.16-.29.21-.57.21-1.3V13.5z">
+                </path>
+                <path fill="currentColor" fill-rule="nonzero"
+                  d="M17 7h-1v-.44c0-.66-.04-.86-.15-1.07a.82.82 0 0 0-.34-.34C15.3 5.04 15.1 5 14.44 5H9.56c-.66 0-.86.04-1.07.15a.82.82 0 0 0-.34.34C8.04 5.7 8 5.9 8 6.57V7H7v-.44c0-.89.1-1.21.27-1.54.17-.32.43-.58.75-.75.33-.18.65-.27 1.54-.27h4.88c.89 0 1.21.1 1.54.27.32.17.58.43.75.75.18.33.27.65.27 1.54V7z">
+                </path>
+                <path fill="currentColor" d="M16 11h1v1h-1z"></path>
+              </g>
+            </svg>
+            <span class="s2">Print current view</span>
+          </div>
+          <div  style=" height: 1rem; width: 24.4rem;"></div>
+          <div class="home2">
+            <span>ctrl</span>
+            <kbd>p</kbd>
+          </div>
+        </div>
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg width="24" height="24" class="menu_icon" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M4.5 5h15a.5.5 0 1 1 0 1h-15a.5.5 0 0 1 0-1zm0 6h15a.5.5 0 1 1 0 1h-15a.5.5 0 1 1 0-1zm0 6h15a.5.5 0 1 1 0 1h-15a.5.5 0 1 1 0-1z">
+              </path>
+            </svg>
+            <span class="s2">Open/close sidebar</span>
+          </div>
+          <div  style=" height: 1rem; width: 25.8rem;"></div>
+          <div class="home2">
+            <kbd>M</kbd>
+          </div>
+        </div>
+        <span class="s1">AI Assist</span>
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" fill="none" viewBox="0 0 24 25">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M6.936 2.144c-.01.008-.025.022-.033.059l-.191.826a2.4 2.4 0 0 1-1.636 1.755l-.397.122a.093.093 0 0 0-.054.035.107.107 0 0 0-.017.06c0 .026.008.047.017.061a.093.093 0 0 0 .054.035l.397.122a2.4 2.4 0 0 1 1.636 1.755l.19.826c.009.037.024.051.034.06A.11.11 0 0 0 7 7.877a.11.11 0 0 0 .064-.019c.01-.008.025-.022.033-.059l.191-.826a2.4 2.4 0 0 1 1.636-1.755l.397-.122a.093.093 0 0 0 .054-.035.107.107 0 0 0 .017-.06.107.107 0 0 0-.017-.06.093.093 0 0 0-.054-.036l-.397-.122A2.4 2.4 0 0 1 7.288 3.03l-.19-.826c-.009-.037-.024-.051-.034-.059A.109.109 0 0 0 7 2.125a.109.109 0 0 0-.064.02Zm-.813-.121c.215-.93 1.54-.93 1.754 0l.19.826a1.6 1.6 0 0 0 1.091 1.17l.397.122c.849.26.849 1.461 0 1.721l-.397.122a1.6 1.6 0 0 0-1.09 1.17l-.191.826c-.215.93-1.54.93-1.754 0l-.19-.826a1.6 1.6 0 0 0-1.091-1.17l-.397-.122c-.849-.26-.849-1.461 0-1.721l.397-.122a1.6 1.6 0 0 0 1.09-1.17l.191-.826ZM4.137 14.39a.15.15 0 0 0-.274 0l-.269.592a3.25 3.25 0 0 1-1.614 1.614l-.592.269a.15.15 0 0 0 0 .273l.592.27a3.25 3.25 0 0 1 1.614 1.613l.27.593a.15.15 0 0 0 .273 0l.269-.593a3.25 3.25 0 0 1 1.614-1.614l.592-.269a.15.15 0 0 0 0-.273l-.592-.27a3.25 3.25 0 0 1-1.614-1.613l-.27-.592Zm-1.093-.373c.373-.82 1.539-.82 1.912 0l.27.593c.234.517.649.931 1.166 1.166l.593.27c.82.373.82 1.538 0 1.912l-.593.269a2.35 2.35 0 0 0-1.167 1.167l-.27.592c-.372.82-1.538.82-1.91 0l-.27-.592a2.35 2.35 0 0 0-1.167-1.167l-.593-.27c-.82-.373-.82-1.538 0-1.911l.593-.27a2.35 2.35 0 0 0 1.167-1.166l.27-.593Zm13.578-8.475c-.393-1.03-1.851-1.03-2.243 0l-1.397 3.67a1.5 1.5 0 0 1-.781.831l-2.605 1.184c-1.095.498-1.095 2.052 0 2.55L12.2 14.96c.36.164.641.463.782.832l1.397 3.67c.392 1.03 1.85 1.03 2.243 0l1.396-3.67a1.5 1.5 0 0 1 .781-.832l2.605-1.184c1.095-.497 1.095-2.051 0-2.549L18.8 10.043a1.5 1.5 0 0 1-.78-.832l-1.397-3.669Zm-1.309.356a.2.2 0 0 1 .374 0l1.397 3.669a2.5 2.5 0 0 0 1.302 1.386l2.605 1.184a.4.4 0 0 1 0 .729l-2.605 1.184a2.5 2.5 0 0 0-1.302 1.386l-1.397 3.67a.2.2 0 0 1-.374 0l-1.397-3.67a2.5 2.5 0 0 0-1.302-1.386l-2.605-1.184a.4.4 0 0 1 0-.729l2.605-1.184a2.5 2.5 0 0 0 1.302-1.386l1.397-3.67Z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Create new filter</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="Miscellaneous one">
+        <span class="top"></span> 
+        <span class="s1">Miscellaneous</span>
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M10.96 3a1 1 0 0 0-.996.918l-.088 1.07a7.157 7.157 0 0 0-1.34.545l-.811-.688a1 1 0 0 0-1.354.056l-1.47 1.47a1 1 0 0 0-.056 1.354l.688.81a7.157 7.157 0 0 0-.544 1.34l-1.071.089A1 1 0 0 0 3 10.96v2.08a1 1 0 0 0 .918.996l1.134.094c.142.436.325.856.547 1.256l-.754.89a1 1 0 0 0 .056 1.353l1.47 1.47a1 1 0 0 0 1.354.056l.957-.812c.378.188.771.344 1.177.463l.105 1.276a1 1 0 0 0 .996.918h2.08a1 1 0 0 0 .996-.918l.11-1.34c.378-.123.745-.279 1.096-.463l1.033.876a1 1 0 0 0 1.354-.056l1.47-1.47a1 1 0 0 0 .056-1.354l-.876-1.033c.184-.351.34-.718.463-1.096l1.34-.11A1 1 0 0 0 21 13.04v-2.08a1 1 0 0 0-.918-.996l-1.276-.105a7.15 7.15 0 0 0-.463-1.177l.812-.957a1 1 0 0 0-.056-1.354l-1.47-1.47a1 1 0 0 0-1.354-.056l-.889.754c-.4-.222-.82-.405-1.256-.547l-.094-1.134A1 1 0 0 0 13.04 3h-2.08Zm-.5 2.868a.5.5 0 0 0 .383-.446L10.96 4h2.08l.12 1.474a.5.5 0 0 0 .368.442c.582.158 1.136.4 1.646.718a.5.5 0 0 0 .588-.043l1.16-.983 1.47 1.47-1.031 1.216a.5.5 0 0 0-.054.569 6.16 6.16 0 0 1 .622 1.582.5.5 0 0 0 .445.382L20 10.96v2.08l-1.679.138a.5.5 0 0 0-.441.366 6.159 6.159 0 0 1-.637 1.503.5.5 0 0 0 .05.578l1.099 1.297-1.47 1.47-1.297-1.1a.5.5 0 0 0-.578-.049c-.47.278-.975.492-1.503.637a.5.5 0 0 0-.366.441L13.039 20H10.96l-.133-1.626a.5.5 0 0 0-.382-.445 6.16 6.16 0 0 1-1.582-.622.5.5 0 0 0-.569.054l-1.216 1.03-1.47-1.47.983-1.159a.5.5 0 0 0 .043-.588 6.165 6.165 0 0 1-.718-1.646.5.5 0 0 0-.442-.367L4 13.04v-2.08l1.422-.117a.5.5 0 0 0 .446-.382c.145-.61.381-1.192.7-1.728a.5.5 0 0 0-.048-.579l-.912-1.076 1.47-1.47 1.076.912a.5.5 0 0 0 .58.049 6.159 6.159 0 0 1 1.727-.701ZM12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm2.5-3.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">General</span>
+          </div>
+          <div  style=" height: 1rem; width: 27.2rem;"></div>
+          <div class="home2">
+            <kbd>O</kbd>
+            <span>then</span>
+            <kbd>S</kbd>
+          </div>
+        </div>
+
+
+
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+              <path fill="currentColor"
+                d="M15 14.5a2 2 0 0 1 1.936 1.498L19.5 16a.5.5 0 0 1 0 1l-2.563.001a2 2 0 0 1-3.874 0L4.5 17a.5.5 0 0 1 0-1l8.563-.002A2 2 0 0 1 15 14.5zm-.982 1.81.005-.025-.005.026-.003.014-.004.025-.007.061A.897.897 0 0 0 14 16.5l.008.125.007.047-.001.002.003.014.006.024h-.001l.004.018.016.058.007.021.004.013.009.026.013.033.012.027-.011-.026.019.043-.008-.017.029.06-.018-.037.048.09a1 1 0 0 0 1.785-.155l.014-.039.006-.018-.015.039.022-.06-.001-.001.016-.057.004-.018.005-.024.001-.006v-.001l.005-.033.008-.06A.877.877 0 0 0 16 16.5l-.008-.124a.96.96 0 0 0-.007-.051l-.001-.001-.003-.014-.01-.047-.004-.016-.007-.024-.01-.034-.004-.012-.01-.03-.006-.013-.007-.017-.01-.026a1 1 0 0 0-1.844.043l-.013.034-.007.022-.014.047-.002.009v.001l-.005.016-.01.047zM9 9.5c.931 0 1.714.636 1.937 1.498L19.5 11a.5.5 0 0 1 0 1l-8.563.001a2 2 0 0 1-3.874 0L4.5 12a.5.5 0 0 1 0-1l2.564-.002A2 2 0 0 1 9 9.5zm0 1a1 1 0 0 0-.93.634l-.014.034-.007.022-.014.047-.002.009v.001l-.005.016-.01.047.005-.025-.005.026-.003.014-.004.025-.007.061C8 11.441 8 11.471 8 11.5l.008.125a.995.995 0 0 0 .007.047l-.001.002.003.014.006.024h-.001l.004.018.016.058.007.021.004.013.009.026.013.033.012.027-.011-.026.019.043-.008-.017.029.06-.018-.037.048.09a1 1 0 0 0 1.785-.155l.014-.039.006-.018-.015.039.022-.06-.001-.001.016-.057.004-.018.005-.024.001-.006v-.001l.005-.033.008-.06A.877.877 0 0 0 10 11.5l-.008-.124a.991.991 0 0 0-.007-.051l-.001-.001-.003-.014-.01-.047-.004-.016-.007-.024-.01-.034-.004-.012-.01-.03-.006-.013-.007-.017-.01-.026A1 1 0 0 0 9 10.5zm6-6a2 2 0 0 1 1.936 1.498L19.5 6a.5.5 0 0 1 0 1l-2.563.001a2 2 0 0 1-3.874 0L4.5 7a.5.5 0 0 1 0-1l8.563-.002A2 2 0 0 1 15 4.5zm0 1a1 1 0 0 0-.93.634l-.014.034-.007.022-.014.047-.002.009v.001l-.005.016-.01.047.005-.025-.005.026-.003.014-.004.025-.007.061C14 6.441 14 6.471 14 6.5l.008.125.007.047-.001.002.003.014.006.024h-.001l.004.018.016.058.007.021.004.013.009.026.013.033.012.027-.011-.026.019.043-.008-.017.029.06-.018-.037.048.09a1 1 0 0 0 1.785-.155l.014-.039.006-.018-.015.039.022-.06-.001-.001.016-.057.004-.018.005-.024.001-.006v-.001l.005-.033.008-.06C16 6.557 16 6.528 16 6.5l-.008-.124a.96.96 0 0 0-.007-.051l-.001-.001-.003-.014-.01-.047-.004-.016-.007-.024-.01-.034-.004-.012-.01-.03-.006-.013-.007-.017-.01-.026A1 1 0 0 0 15 5.5z">
+              </path>
+            </svg>
+            <span class="s2">Advanced</span>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M13.5 18.75C14 19.875 14.5 21 16 21c3 0 5-4 5-9s-4.03-9-9-9a9 9 0 0 0-9 9c0 7.418 2.751 6.307 5.397 5.238.92-.371 1.828-.738 2.603-.738 1.5 0 2 1.125 2.5 2.25ZM20 12c0 4.664-1.796 8-4 8-.716 0-.985-.303-1.586-1.656-.899-2.022-1.63-2.844-3.414-2.844-.835 0-1.459.198-3.017.827l-.252.102c-1.478.59-2.188.714-2.622.453C4.453 16.49 4 15 4 12a8 8 0 0 1 8-8c4.429 0 8 3.563 8 8Zm-2 3.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.5-3a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM16.75 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM12 7.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM9.25 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6.5 12.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Theme</span>
+          </div>
+          <div  style=" height: 1rem; width: 27.7rem;"></div>
+          <div class="home2">
+            <kbd>O</kbd>
+            <span>then</span>
+            <kbd>T</kbd>
+          </div>
+        </div>
+
+
+
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M19 4.001H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-12a2 2 0 0 0-2-2Zm-15 2a1 1 0 0 1 1-1h4v14H5a1 1 0 0 1-1-1v-12Zm6 13h9a1 1 0 0 0 1-1v-12a1 1 0 0 0-1-1h-9v14Z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Sidebar</span>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M17 5H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h5.022c.23.359.494.694.788 1H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v2.498a6.45 6.45 0 0 0-1-.324V7a2 2 0 0 0-2-2Zm.5 15a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm0 1a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Zm0-8a.5.5 0 0 1 .492.41l.008.09V15h1.5a.5.5 0 0 1 .09.992L19.5 16H18v1.5a.5.5 0 0 1-.992.09L17 17.5V16h-1.5a.5.5 0 0 1-.09-.992L15.5 15H17v-1.5a.5.5 0 0 1 .5-.5Z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Quick Add</span>
+          </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0Zm17 0a8 8 0 0 1-15.382 3.089L7.5 12.207l2.646 2.647a.5.5 0 0 0 .708 0L16 9.707V12a.5.5 0 0 0 1 0V8.497A.5.5 0 0 0 16.5 8H13a.5.5 0 0 0 0 1h2.293L10.5 13.793l-2.646-2.647a.5.5 0 0 0-.708 0L4.26 14.032A8 8 0 1 1 20 12Z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Productivity</span>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M4.854 5.354a1.974 1.974 0 0 0-.272 2.453.5.5 0 1 1-.843.538 2.974 2.974 0 0 1 4.106-4.106.5.5 0 0 1-.536.843 1.976 1.976 0 0 0-2.455.272Zm11.839-.272a1.974 1.974 0 0 1 2.725 2.727.5.5 0 1 0 .844.536 2.976 2.976 0 0 0-4.107-4.106.5.5 0 1 0 .538.843Zm.245 13.063A7.47 7.47 0 0 1 12 20c-1.891 0-3.619-.7-4.938-1.855l-1.708 1.709a.5.5 0 1 1-.708-.708l1.709-1.708a7.5 7.5 0 1 1 11.29 0l1.709 1.708a.5.5 0 1 1-.708.707l-1.708-1.708ZM12 19a6.5 6.5 0 1 1 0-13 6.5 6.5 0 0 1 0 13Zm0-11v4h2.5a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5V8a.5.5 0 1 1 1 0Z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Reminders</span>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M5.475 19a1.5 1.5 0 0 1-1.254-2.323C5.568 14.625 6.25 11.989 6.25 8.75a5.75 5.75 0 1 1 11.5 0c0 3.24.682 5.875 2.03 7.927A1.5 1.5 0 0 1 18.524 19H14.5a2.5 2.5 0 0 1-5 0H5.475ZM12 20.5a1.5 1.5 0 0 0 1.5-1.5h-3a1.5 1.5 0 0 0 1.5 1.5Zm7.025-3a.5.5 0 0 1-.5.5H5.475a.5.5 0 0 1-.418-.774C6.519 14.998 7.25 12.172 7.25 8.75a4.75 4.75 0 0 1 9.5 0c0 3.423.731 6.249 2.193 8.476a.5.5 0 0 1 .082.274Z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Notification</span>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M6.25 18a3.75 3.75 0 0 1-1.243-7.29 3 3 0 0 1 3.81-3.098 5.5 5.5 0 0 1 10.178 3.1A3.751 3.751 0 0 1 17.751 18H14v-1h3.75a2.75 2.75 0 0 0 .914-5.345l-.695-.245.028-.736L18 10.5a4.5 4.5 0 0 0-8.331-2.361l-.397.641-.726-.205a2.002 2.002 0 0 0-2.541 2.067l.053.76-.72.252A2.751 2.751 0 0 0 6.25 17H11v1H6.25ZM13 11.707V20.5a.5.5 0 0 1-1 0v-8.793l-1.646 1.647a.5.5 0 0 1-.708-.708l2.5-2.5a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1-.708.708L13 11.707Z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Backups</span>
+          </div>
+        </div>
+
+        <span class="top"></span> 
+        <span class="s1">Account</span>
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M3 12a8.96 8.96 0 0 0 1.778 5.372A8.987 8.987 0 0 0 12 21a8.981 8.981 0 0 0 7.222-3.628A9 9 0 1 0 3 12zm9 3c2.747 0 5.259.472 6.562 1.577a8 8 0 1 0-13.124 0C6.74 15.472 9.253 15 12 15zm5.94 2.36A7.98 7.98 0 0 1 12 20a7.98 7.98 0 0 1-5.94-2.64C7.022 16.518 9.18 16 12 16c2.82 0 4.978.519 5.94 1.36zM12 14a3.75 3.75 0 1 1 0-7.5 3.75 3.75 0 0 1 0 7.5zm2.75-3.75a2.75 2.75 0 1 1-5.5 0 2.75 2.75 0 0 1 5.5 0z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Account</span>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M3 12a8.96 8.96 0 0 0 1.778 5.372A8.987 8.987 0 0 0 12 21a8.981 8.981 0 0 0 7.222-3.628A9 9 0 1 0 3 12zm9 3c2.747 0 5.259.472 6.562 1.577a8 8 0 1 0-13.124 0C6.74 15.472 9.253 15 12 15zm5.94 2.36A7.98 7.98 0 0 1 12 20a7.98 7.98 0 0 1-5.94-2.64C7.022 16.518 9.18 16 12 16c2.82 0 4.978.519 5.94 1.36zM12 14a3.75 3.75 0 1 1 0-7.5 3.75 3.75 0 0 1 0 7.5zm2.75-3.75a2.75 2.75 0 1 1-5.5 0 2.75 2.75 0 0 1 5.5 0z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Change email address</span>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M3 12a8.96 8.96 0 0 0 1.778 5.372A8.987 8.987 0 0 0 12 21a8.981 8.981 0 0 0 7.222-3.628A9 9 0 1 0 3 12zm9 3c2.747 0 5.259.472 6.562 1.577a8 8 0 1 0-13.124 0C6.74 15.472 9.253 15 12 15zm5.94 2.36A7.98 7.98 0 0 1 12 20a7.98 7.98 0 0 1-5.94-2.64C7.022 16.518 9.18 16 12 16c2.82 0 4.978.519 5.94 1.36zM12 14a3.75 3.75 0 1 1 0-7.5 3.75 3.75 0 0 1 0 7.5zm2.75-3.75a2.75 2.75 0 1 1-5.5 0 2.75 2.75 0 0 1 5.5 0z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Change password</span>
+          </div>
+        </div>
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M3 12a8.96 8.96 0 0 0 1.778 5.372A8.987 8.987 0 0 0 12 21a8.981 8.981 0 0 0 7.222-3.628A9 9 0 1 0 3 12zm9 3c2.747 0 5.259.472 6.562 1.577a8 8 0 1 0-13.124 0C6.74 15.472 9.253 15 12 15zm5.94 2.36A7.98 7.98 0 0 1 12 20a7.98 7.98 0 0 1-5.94-2.64C7.022 16.518 9.18 16 12 16c2.82 0 4.978.519 5.94 1.36zM12 14a3.75 3.75 0 1 1 0-7.5 3.75 3.75 0 0 1 0 7.5zm2.75-3.75a2.75 2.75 0 1 1-5.5 0 2.75 2.75 0 0 1 5.5 0z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Enable 2FA</span>
+          </div>
+        </div>
+
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M3 12a8.96 8.96 0 0 0 1.778 5.372A8.987 8.987 0 0 0 12 21a8.981 8.981 0 0 0 7.222-3.628A9 9 0 1 0 3 12zm9 3c2.747 0 5.259.472 6.562 1.577a8 8 0 1 0-13.124 0C6.74 15.472 9.253 15 12 15zm5.94 2.36A7.98 7.98 0 0 1 12 20a7.98 7.98 0 0 1-5.94-2.64C7.022 16.518 9.18 16 12 16c2.82 0 4.978.519 5.94 1.36zM12 14a3.75 3.75 0 1 1 0-7.5 3.75 3.75 0 0 1 0 7.5zm2.75-3.75a2.75 2.75 0 1 1-5.5 0 2.75 2.75 0 0 1 5.5 0z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Recovery codes</span>
+          </div>
+        </div>
+
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M3 12a8.96 8.96 0 0 0 1.778 5.372A8.987 8.987 0 0 0 12 21a8.981 8.981 0 0 0 7.222-3.628A9 9 0 1 0 3 12zm9 3c2.747 0 5.259.472 6.562 1.577a8 8 0 1 0-13.124 0C6.74 15.472 9.253 15 12 15zm5.94 2.36A7.98 7.98 0 0 1 12 20a7.98 7.98 0 0 1-5.94-2.64C7.022 16.518 9.18 16 12 16c2.82 0 4.978.519 5.94 1.36zM12 14a3.75 3.75 0 1 1 0-7.5 3.75 3.75 0 0 1 0 7.5zm2.75-3.75a2.75 2.75 0 1 1-5.5 0 2.75 2.75 0 0 1 5.5 0z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Delete account</span>
+          </div>
+        </div>
+
+
+
+
+
+
+        <span class="top"></span> 
+        <span class="s1">Subscription</span>
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M20 16h-1v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v1h1V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1zm0-7h-6a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1zm-6 1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h6v-4h-6zm4 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Subscription</span>
+          </div>
+        </div>
+
+
+
+
+
+
+
+        <span class="top"></span> 
+        <span class="s1">Integrations</span>
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M3 10.01V6a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v4.01c0 .1.134.142.198.066l.057-.066A3.014 3.014 0 0 1 19 9.401a3 3 0 1 1-.802 4.523c-.064-.076-.198-.033-.198.066V18a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4.01c0-.569.4-.93.764-1.049.357-.117.86-.065 1.201.341a2 2 0 1 0 0-2.564c-.34.406-.844.458-1.2.341A1.103 1.103 0 0 1 3 10.01ZM5 5a1 1 0 0 0-1 1v4.01c0 .1.135.142.198.066A3.016 3.016 0 0 1 5 9.401a3 3 0 1 1-.802 4.523C4.135 13.848 4 13.89 4 13.99V18a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.01c0-.569.4-.93.764-1.049.358-.117.86-.065 1.201.341a2 2 0 1 0 0-2.564c-.34.406-.843.458-1.2.341A1.103 1.103 0 0 1 17 10.01V6a1 1 0 0 0-1-1H5Z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Integrations</span>
+          </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="home tow red">
+          <div class="home1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M3 10.01V6a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v4.01c0 .1.134.142.198.066l.057-.066A3.014 3.014 0 0 1 19 9.401a3 3 0 1 1-.802 4.523c-.064-.076-.198-.033-.198.066V18a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4.01c0-.569.4-.93.764-1.049.357-.117.86-.065 1.201.341a2 2 0 1 0 0-2.564c-.34.406-.844.458-1.2.341A1.103 1.103 0 0 1 3 10.01ZM5 5a1 1 0 0 0-1 1v4.01c0 .1.135.142.198.066A3.016 3.016 0 0 1 5 9.401a3 3 0 1 1-.802 4.523C4.135 13.848 4 13.89 4 13.99V18a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.01c0-.569.4-.93.764-1.049.358-.117.86-.065 1.201.341a2 2 0 1 0 0-2.564c-.34.406-.843.458-1.2.341A1.103 1.103 0 0 1 17 10.01V6a1 1 0 0 0-1-1H5Z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="s2">Developer</span>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+</body>
+
+</html>
