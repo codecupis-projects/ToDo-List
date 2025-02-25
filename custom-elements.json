@@ -1,0 +1,15 @@
+{
+    "tags": [
+        {
+            "name": "my-component",
+            "description": "A sample custom component",
+            "attributes": [],
+            "properties": [],
+            "events": []
+        },
+        {
+            "name": "parent-component",
+            "description": "A sample custom component for nested components testing"
+        }
+    ]
+}
