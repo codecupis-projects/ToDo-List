@@ -1,6 +1,13 @@
 <!-- Html structure of your component. No need for html, head, body, etc tags.  -->
+<!-- REMOVE these examples and put any html tag you want -->
 <div>
-    <!-- Put any html tag you want -->
-    <!-- Text inside of our custom tag goes inside the slot tag -->
-    <slot></slot>
+    <div style="background-color: blue;">
+        <!-- Text inside of our custom tag goes inside the slot tag -->
+        <slot></slot>
+    </div>
+
+    <div style="background-color: cyan;">
+        <!-- Or we can use named slots -->
+        <slot name="some-name"></slot>
+    </div>
 </div>

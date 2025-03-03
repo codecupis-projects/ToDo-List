@@ -1,6 +1,6 @@
 import { defineComponent } from '../../../scripts/components.js';
 
-defineComponent({tagName: "my-template",
+defineComponent({tagName: "todo-item",
     meta: import.meta,
     templatePath: "template.html",
     stylePaths: ["/styles/global.css", "styles.css"],
@@ -13,13 +13,7 @@ defineComponent({tagName: "my-template",
 function start(shadow){
     // Your js codes. Use "shadow" as the root element similar how you use "document" in normal js files
     // Some examples
-    
-    /** @type {HTMLSlotElement} */
-    const slot = shadow.querySelector("div>slot");
-    // We can access the elements assigned to a slot in this way
-    const mainText = slot.assignedNodes()[0];
-    mainText.textContent += "!!";
 
-    const myDiv = shadow.querySelector("div");
-    myDiv.style.border = "1px solid blue";
+    const myInput = shadow.querySelector("div>input");
+    console.log(myInput);
 }

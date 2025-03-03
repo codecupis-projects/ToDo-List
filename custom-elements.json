@@ -1,15 +1,20 @@
 {
     "tags": [
         {
-            "name": "my-component",
-            "description": "A sample custom component",
+            "name": "my-template",
+            "description": "A sample custom component as starting point for creating other components.",
             "attributes": [],
             "properties": [],
             "events": []
         },
         {
-            "name": "parent-component",
-            "description": "A sample custom component for nested components testing"
+            "name": "todo-item",
+            "description": "A todo item to check."
+        }
+        ,
+        {
+            "name": "todo-section",
+            "description": "A list of todo items."
         }
     ]
 }
