@@ -11,9 +11,5 @@ defineComponent({tagName: "todo-item",
  * @param {ShadowRoot} shadow
  */
 function start(shadow){
-    // Your js codes. Use "shadow" as the root element similar how you use "document" in normal js files
-    // Some examples
-
-    const myInput = shadow.querySelector("div>input");
-    console.log(myInput);
+    
 }
