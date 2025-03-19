@@ -2,16 +2,19 @@
  * Defines the component as a custom HTML element with provided tag name. It also loads
  * the html template, styles, and scripts asynchronously.
  * @param {Object} options - Parameters for defining the component
- * @param {(shadow: ShadowRoot) => void} options.onLoad - The
+ * @param {(element: HTMLElement, shadow: ShadowRoot) => void} options.onLoad - The
  * callback to be called when the component is fully loaded. Sent parameters: your html
  * tag element, shadow root. You can use 'shadow' as the root node similar to the
  * 'document' property in normal scripts.
+ * @param {Object} options.classDefinition - A custom class definition (javascript class)
+ * for the custom HTML element. It must extend the HTMLElement. You can send your custom class
+ * and add your desired properties, methods, and events to that class.
  */
 export function defineComponent({ tagName, meta, templatePath, stylePaths = null,
-    onLoad = null
+    onLoad = null, classDefinition = null
 }) {
     const customElement = defineCustomSimpleElement(meta, templatePath, stylePaths,
-        onLoad);
+        onLoad, classDefinition);
     customElements.define(tagName, customElement);
 }
 
@@ -25,7 +28,7 @@ export async function loadComponent({ element, meta, templatePath, stylePaths = 
     appendStyles(shadow, meta, stylePaths);
     shadow.appendChild(template.content.cloneNode(true));
     if(onLoad)
-        onLoad(shadow);
+        onLoad(element, shadow);
 }
 
 export function getAbsolutePath(meta, path) {
@@ -81,27 +84,24 @@ function appendStyle(shadow, stylePath) {
     shadow.appendChild(styleLink);
 }
 
-class SimpleElement extends HTMLElement {
-    constructor(meta, templatePath, stylePaths, onLoad) {
-        super();
-        this.loadComponent(meta, templatePath, stylePaths, onLoad);
-    }
+function defineCustomSimpleElement(meta, templatePath, stylePaths, onLoad, classDefinition) {
+    if(!classDefinition)
+        classDefinition = HTMLElement;
 
-    async loadComponent(meta, templatePath, stylePaths, onLoad) {
-        await loadComponent({
-            element: this,
-            meta: meta,
-            templatePath: templatePath,
-            stylePaths: stylePaths,
-            onLoad: onLoad
-        });
-    }
-}
-
-function defineCustomSimpleElement(meta, templatePath, stylePaths, onLoad) {
-    return class extends SimpleElement {
+    return class extends classDefinition {
         constructor() {
-            super(meta, templatePath, stylePaths, onLoad);
+            super();
+            this.loadComponent(meta, templatePath, stylePaths, onLoad);
+        }
+    
+        async loadComponent(meta, templatePath, stylePaths, onLoad) {
+            await loadComponent({
+                element: this,
+                meta: meta,
+                templatePath: templatePath,
+                stylePaths: stylePaths,
+                onLoad: onLoad
+            });
         }
     }
 }
