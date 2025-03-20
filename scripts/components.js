@@ -6,7 +6,7 @@
  * callback to be called when the component is fully loaded. Sent parameters: your html
  * tag element, shadow root. You can use 'shadow' as the root node similar to the
  * 'document' property in normal scripts.
- * @param {Object} options.classDefinition - A custom class definition (javascript class)
+ * @param {Object} options.classDefinition - (Optional) A custom class definition (javascript class)
  * for the custom HTML element. It must extend the HTMLElement. You can send your custom class
  * and add your desired properties, methods, and events to that class.
  */
