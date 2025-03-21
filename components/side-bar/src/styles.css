@@ -28,6 +28,8 @@
     width: var(--sidebar-width);
     transition: 0.3s;
     border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     position: fixed;
     z-index: 1;
     background: white;
