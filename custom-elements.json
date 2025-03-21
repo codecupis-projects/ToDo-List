@@ -8,6 +8,10 @@
             "events": []
         },
         {
+            "name": "side-bar",
+            "description": "todo sidebar"
+        },
+        {
             "name": "todo-item",
             "description": "A todo item to check."
         }
