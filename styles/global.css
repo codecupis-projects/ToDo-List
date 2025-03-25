@@ -21,3 +21,7 @@
   --page-top-bar-height: 56px;
   --page-padding-side: 55px;
 }
+
+* {
+  font-family: "lato", sans-serif;
+}
