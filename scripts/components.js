@@ -18,17 +18,26 @@ export function defineComponent({ tagName, meta, templatePath, stylePaths = null
     customElements.define(tagName, customElement);
 }
 
+/**
+ * @param {Object} options - Parameters for defining the component
+ * @param {HTMLElement} options.element - Element to be loaded
+ */
 export async function loadComponent({ element, meta, templatePath, stylePaths = null,
     onLoad = null, mode = "open"
 }) {
     templatePath = getAbsolutePath(meta, templatePath);
     const template = await loadTemplate(templatePath);
+
     mode = mode !== "open" && mode !== "closed" ? "open" : mode;
+    /** @type {ShadowRoot}*/
     const shadow = element.attachShadow({ mode: mode });
     appendStyles(shadow, meta, stylePaths);
     shadow.appendChild(template.content.cloneNode(true));
+
     if(onLoad)
         onLoad(element, shadow);
+    if(element.onLoadTemplate !== undefined && element.onLoadTemplate !== null)
+        element.onLoadTemplate();
 }
 
 export function getAbsolutePath(meta, path) {
