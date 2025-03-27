@@ -1,20 +1,23 @@
 <!-- Test your component in a sample html page. -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/global.css">
     <title>Test Sample Component</title>
-    <!-- Include your component and other you want to use as script tags with module type -->
     <script type="module" src="../src/component.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Test Todo Item</h1>
-    
-    <todo-item></todo-item>
-    <todo-item></todo-item>
-    <todo-item></todo-item>
-    <todo-item></todo-item>
-</body>
 
+    <todo-item>
+      <span slot="todo-item-title">Learn React</span>
+      <span slot="todo-item-description">
+        It's a JavaScript library for building user interfaces
+      </span>
+      <span slot="todo-item-date">11 june 2025</span>
+    </todo-item>
+  </body>
 </html>

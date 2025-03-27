@@ -1,5 +1,8 @@
+@import url("../../../styles/global.css");
+
 a {
   color: var(--color-text-paragraph);
+  text-decoration: none;
 }
 
 hr {
@@ -9,6 +12,10 @@ hr {
 
 body {
   font-family: "lato", sans-serif;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .container {
@@ -164,6 +171,7 @@ body {
   -moz-transition: var(--transition);
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
+  text-align: center;
 }
 
 .form__button:hover {
