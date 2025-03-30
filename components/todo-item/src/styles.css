@@ -6,9 +6,8 @@ svg {
 .todo-item__container {
   display: flex;
   align-items: start;
-  max-width: 100%;
   position: relative;
-  width: max-content;
+  width: 100%;
   gap: 0.25rem;
 }
 
@@ -46,6 +45,8 @@ svg {
 
 .todo-item__content {
   display: flex;
+  position: relative;
+  width: 100%;
 }
 
 .todo-item__info-container {
