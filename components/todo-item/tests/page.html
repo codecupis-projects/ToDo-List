@@ -4,20 +4,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/reset.css">
-    <link rel="stylesheet" href="/styles/global.css">
-    <title>Test Sample Component</title>
+    <title>Test ToDo Item</title>
+    <link
+      rel="shortcut icon"
+      href="../../../assets/icons/todoist.ico"
+      type="image/x-icon"
+    />
     <script type="module" src="../src/component.js"></script>
   </head>
   <body>
     <h1>Test Todo Item</h1>
-
     <todo-item>
       <span slot="todo-item-title">Learn React</span>
       <span slot="todo-item-description">
         It's a JavaScript library for building user interfaces
       </span>
       <span slot="todo-item-date">11 june 2025</span>
+    </todo-item>
+    <br/>
+    <todo-item>
+      <span slot="todo-item-title">Learn Next JS</span>
+      <span slot="todo-item-description">
+        A framework built on top of React
+      </span>
+      <span slot="todo-item-date">12 june 2025</span>
+    </todo-item>
+
+    <h2>Item with fixed width</h2>
+    <div style="width: 500px;">
+      <todo-item>
+        <span slot="todo-item-title">Learn React</span>
+        <span slot="todo-item-description">
+          It's a JavaScript library for building user interfaces
+        </span>
+        <span slot="todo-item-date">11 june 2025</span>
+      </todo-item>
+    </div>
+    <br/>
+    <div style="width: 500px;">
+      <todo-item>
+        <span slot="todo-item-title">Learn Next JS</span>
+        <span slot="todo-item-description">
+          A framework built on top of React
+        </span>
+        <span slot="todo-item-date">12 june 2025</span>
+      </todo-item>
+    </div>
+
+    <h2>Items omiting the description or date</h2>
+    <todo-item>
+      <span slot="todo-item-title">Only Description</span>
+      <span slot="todo-item-description">Another description</span>
+    </todo-item>
+    <todo-item>
+      <span slot="todo-item-title">Only Date</span>
+      <span slot="todo-item-date">12 April 2025</span>
     </todo-item>
   </body>
 </html>

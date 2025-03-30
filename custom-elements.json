@@ -10,11 +10,14 @@
         {
             "name": "todo-item",
             "description": "A todo item to check."
-        }
-        ,
+        },
+        {
+            "name": "todo-items",
+            "description": "A list of todo items to check."
+        },
         {
             "name": "todo-section",
-            "description": "A list of todo items."
+            "description": "A section containing list of todo-items."
         }
     ]
 }

@@ -1,7 +1,7 @@
 @import url("reset.css");
 
 /*  Variables */
-:root {
+:root,:host {
   --color-primary: #d4534a;
   --color-primary-dark: #d4534a;
   --color-primary-light: #f6dad8;

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sample Component</title>
+    <title>Test ToDO Items</title>
     <link
       rel="shortcut icon"
       href="../../../assets/icons/todoist.ico"
@@ -14,10 +14,15 @@
     <script type="module" src="../src/component.js"></script>
 </head>
 <body>
-    <h1>Test My Component</h1>
-    <my-template>Hello<h2 slot="some-name">This is good</h2>
-    </my-template>
-    <my-template>Good Bye</my-template>
+    <h1>Test ToDo Items</h1>
+
+    <h2>Items fill the screen</h2>
+    <todo-items></todo-items>
+
+    <h2>Items with certain width</h2>
+    <div style="width: 500px;">
+        <todo-items></todo-items>
+    </div>
 </body>
 
 </html>
