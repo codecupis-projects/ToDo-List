@@ -1,6 +1,16 @@
 import { defineComponent } from "../../../scripts/components.js";
 
 export class TodoItem extends HTMLElement{
+  onCheckDone = null;
+
+  init(){
+    const checkElement = this.shadowRoot.querySelector(".todo-item__check");
+    checkElement.addEventListener("click", () => {
+      checkElement.classList.toggle("todo-item-done");
+      this.onCheckDone?.(checkElement.classList.contains("todo-item-done"));
+    });
+  }
+
   updateInfo(title, description, date){
     this.#replaceSlot("todo-item-title", title);
     this.#replaceSlot("todo-item-description", description);
@@ -31,7 +41,9 @@ defineComponent({
 });
 
 /**
+ * @param {TodoItems} element
  * @param {ShadowRoot} shadow
  */
-function start(shadow) {
+function start(element, shadow) {
+  element.init();
 }
