@@ -16,7 +16,8 @@ class TodoItems extends HTMLElement{
             this.items.set(itemId, element);
 
             element.onLoadTemplate = () => {
-                element.update(item.done, item.title, item.description, item.date);
+                element.updateInfo(item.title, item.description, item.date);
+                element.setDone(item.done);
                 element.dataset.itemId = itemId;
                 const listItem = document.createElement("li");
                 listItem.appendChild(element);

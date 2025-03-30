@@ -66,7 +66,13 @@ svg {
   position: relative;
   cursor: pointer;
   margin-top: 0.15rem;
+  scale: 1;
+  transition: var(--transition);
+}
 
+.todo-item__info-icon:hover {
+  scale: 1.2;
+  transition: var(--transition);
 }
 
 .todo-item__check-circle {
@@ -80,8 +86,6 @@ svg {
   width: 12px;
   height: 12px;
   fill: var(--color-primary);
-  opacity: 0;
-  visibility: hidden;
   transition: var(--transition);
   -webkit-transition: var(--transition);
   -moz-transition: var(--transition);
@@ -89,8 +93,18 @@ svg {
   -o-transition: var(--transition);
 }
 
-.todo-item__check-circle:hover + .todo-item__check,
-.todo-item__check:hover {
+:not(.todo-item-done).todo-item__check {
+  opacity: 0;
+  visibility: hidden;
+}
+
+:not(.todo-item-done).todo-item__check-circle:hover + .todo-item__check,
+:not(.todo-item-done).todo-item__check:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.todo-item-done.todo-item__check {
   opacity: 1;
   visibility: visible;
 }
