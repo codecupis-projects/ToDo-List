@@ -17,7 +17,7 @@
         },
         {
             "name": "todo-section",
-            "description": "A list of todo items."
+            "description": "A section containing list of todo-items."
         }
     ]
 }

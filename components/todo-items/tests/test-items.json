@@ -2,8 +2,8 @@
     {
         "id": "1",
         "done": false,
-        "title": "Item 1",
-        "description": "Description 1",
+        "title": "Learn React",
+        "description": "It's a JavaScript library for building user interfaces",
         "date": "11 Jan 2024"
     },
     {
