@@ -5,8 +5,9 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 0.25rem;
     padding: 10px;
-    border: 1px solid #696767;
+    /* border: 1px solid #696767; */
     width: 100%;
 }
 
@@ -16,7 +17,7 @@
     align-items: center;
     width: 100%;
     padding: 10px;
-    border: 1px solid #696767;
+    border-top: 1px solid #eeeeee;
 }
 
 #items li>todo-item{
